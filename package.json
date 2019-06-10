@@ -1,0 +1,25 @@
+{
+  "name": "rhythm-is-a-maker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shektor/rhythm-is-a-maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shektor/rhythm-is-a-maker/issues"
+  },
+  "homepage": "https://github.com/shektor/rhythm-is-a-maker#readme",
+  "dependencies": {
+    "bufferutil": "4.0.1",
+    "express": "4.17.1",
+    "utf-8-validate": "5.0.2",
+    "ws": "7.0.0"
+  }
+}
