@@ -28,14 +28,12 @@
         
   if(active){
     Tone.Transport.scheduleRepeat(repeat, '8n');
-    Tone.Transport.stop();
   }
 
   document.querySelector('.stop').onclick = ()=> {
     Tone.Transport.stop();
     document.querySelector('.powerOn').style.color = 'green';
     document.getElementsByClassName('myCheck').checked = false;
-    active = false
   }
 
   document.querySelector('.powerOn').onclick = ()=> {
