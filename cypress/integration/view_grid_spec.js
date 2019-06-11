@@ -11,7 +11,7 @@ describe('My first test', function(){
 // })
 
 it('visits the local host', function(){
- cy.visit('http://localhost:3000/')
+ cy.visit('')
 
   cy.contains('1')
   cy.get('button').should('have.id', 'd1-1')
