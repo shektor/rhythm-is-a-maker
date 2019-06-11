@@ -16,15 +16,43 @@
           <th><button id="d1-1" type="button" class="btn top-row-button d1"></button></th>
         </tr>
     </table>
+    <hr>
+    <div>
+      <div>
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+        </div>
     
-    <script>
-      var HOST = location.origin.replace(/^http/, 'ws');
-      var ws = new WebSocket(HOST);
-      var el = document.getElementById('server-time');
+        <div>
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+          <input type="checkbox">
+        </div>
 
-      ws.onmessage = function (event) {
-        el.innerHTML = 'Server time: ' + event.data;
-      };
-    </script>
+        <div>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        </div>
+  </div>
+    <script src="/socket.js"></script>
+    <script src="https://unpkg.com/tone"></script>
+    <script src="/tone.js"></script>
   </body>
 </html>

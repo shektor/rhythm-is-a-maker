@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "cypress run"
+    "test": "cypress run",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,13 @@
   "homepage": "https://github.com/shektor/rhythm-is-a-maker#readme",
   "dependencies": {
     "bufferutil": "4.0.1",
+    "ejs": "^2.6.1",
     "express": "4.17.1",
     "utf-8-validate": "5.0.2",
     "ws": "7.0.0"
   },
   "devDependencies": {
-    "cypress": "^3.3.1"
+    "cypress": "^3.3.1",
+    "nodemon": "^1.19.1"
   }
 }
