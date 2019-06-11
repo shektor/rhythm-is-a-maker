@@ -6,6 +6,17 @@
   </head>
   <body>
     <p id='server-time'></p>
+    <table>
+        <tr id="header">
+          <th><span id"bar-1" class="top-bar">1</span></th>
+        </tr>
+
+        <tr>
+          <tr id="drum-1">
+          <th><button id="d1-1" type="button" class="btn top-row-button d1"></button></th>
+        </tr>
+    </table>
+    
     <script>
       var HOST = location.origin.replace(/^http/, 'ws');
       var ws = new WebSocket(HOST);
