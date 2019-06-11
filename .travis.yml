@@ -1,5 +1,4 @@
 language: node_js
 
-script:
-  - npm install cypress
-  - $(npm bin)/cypress run
+node_js: 
+  - "stable"
