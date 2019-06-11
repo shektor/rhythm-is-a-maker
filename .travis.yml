@@ -1,5 +1,5 @@
 language: node_js
 
 script:
-  - npm install
+  - npm install cypress
   - $(npm bin)/cypress run
