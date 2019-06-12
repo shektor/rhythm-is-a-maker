@@ -20,7 +20,7 @@
 
   const active = true;
         inactive = false;
-        
+
   if(active){
     Tone.Transport.scheduleRepeat(repeat, '8n');
   }
@@ -36,9 +36,9 @@
     Tone.Transport.start();
     document.querySelector('.powerOn').style.color = 'red';
   }
-  
+
   function repeat(time) {
-    let step = index % 8;
+    let step = index % 16;
     for (let i = 0; i < $rows.length; i++) {
       let beat = beats[i],
           $row = $rows[i],
@@ -47,5 +47,5 @@
     }
     index++;
   }
-  
+
 })();
