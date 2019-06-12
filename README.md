@@ -44,6 +44,7 @@ How Tone.Js Works
 var synth = new Tone.Synth().toMaster()
 synth.triggerAttackRelease('C4', '8n')
 ```
+
 > This creates a new instance of Tone and stores it into a variable called ``synth``. The ``.toMaster()`` connects the sound to the speakers on your device and lastly, to make a sound we use a method called ``triggerAttackRelease('C4', '8n')``.
 
 ```TriggerAttackRelease is a combination of two methods: triggerAttack when the amplitude is rising (for example from a ‘key down’ or ‘note on’ event), and triggerRelease is when the amplitude is going back to 0 (‘key up’ / ‘note off’).```
@@ -62,3 +63,6 @@ App Goal.
 |    :------:                       |
 |Express.js \| Tone.js \| Travis CI |
    
+=======
+<img width="1004" alt="music_maker" src="https://user-images.githubusercontent.com/44870179/59340103-442e2480-8cfd-11e9-81a7-712025774b91.png">
+
