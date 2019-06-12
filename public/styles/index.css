@@ -1,3 +1,35 @@
+:root{
+ --mons :'Montserrat', sans-serif;
+ --open : 'Open Sans', sans-serif;
+}
+
+#app-title{
+  background-color:#FD1014;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+#app-title div {
+  padding: 4px;
+  margin-right: 4px;
+}
+#app-title div .logo{
+  font-size: 14px;
+  position: relative;
+  transition: color 2s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+#app-title div .logo:hover{
+  color: #FFFF;
+  font-size: 18px;
+}
+
+#app-title h1{
+  font-family: var(--mons);
+  color: #FFFF;
+  font-size: 24px;
+}
+
 .counter{
   display: flex;
   margin-left: 1px;
