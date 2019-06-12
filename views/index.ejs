@@ -9,24 +9,24 @@
   </head>
   <body>
     <div id='app-title'>
-        <div>
-            <i class="fab fa-spotify logo"></i>
-        </div>
-        <h1>Rhythm Is A Maker</h1>
+        <i class="fab fa-spotify logo"></i>
+        <h1>Rhythm Is A Maker.</h1>
     </div>
 
-    <ul>
-      <li>Click on the checkboxes to compose your beat</li>
-      <li>Press the <strong>play</strong> button to start the loop</li>
-      <li>Press the <strong>stop</strong> button to end the loop</li>
-    </ul>
+    <div class="container instructions">
+      <ul>
+        <li class="badge badge-info">Click on the checkboxes to compose your beat</li>
+        <li class="badge badge-danger">Press the <strong>play</strong> button to start the loop</li>
+        <li class="badge badge-success">Press the <strong>stop</strong> button to end the loop</li>
+      </ul>
+    </div>
 
     <hr>
-    <div class="on-container">
+    <div class="on-container container">
       <i class="fas fa-play powerOn"></i>
       <i class="fas fa-stop-circle stop"></i>
     </div>
-    <div>
+    <div class="container dashboard">
       <div>
           <input type="checkbox">
           <input type="checkbox">
@@ -84,6 +84,7 @@
             <input type="checkbox">
         </div>
   </div>
+  
   <div class="counter">
     <h1 class="count-loop c-0">1</h1>
     <h1 class="count-loop c-1">2</h1>

@@ -13,13 +13,15 @@
   padding: 4px;
   margin-right: 4px;
 }
-#app-title div .logo{
+#app-title .logo{
   font-size: 14px;
   position: relative;
+  top: 2px;
+  padding: 5px;
   transition: color 2s cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
-#app-title div .logo:hover{
+#app-title .logo:hover{
   color: #FFFF;
   font-size: 18px;
 }
@@ -33,11 +35,28 @@
 .counter{
   display: flex;
   margin-left: 1px;
+  width: 60%;
+  justify-content: center;
 }
 
 .counter h1{
-  font-size: 14px;
-  margin: 5px;
+  font-size: 10px;
+  margin: 3px;
   padding: 1px;
   width: 10px;
 }
+
+/*Instructions*/
+
+.instructions{
+  padding: 15px;
+}
+
+.instructions ul li{
+  list-style-type: none;
+  font-family: var(--open);
+  font-size: 12px;
+}
+
+/*Dashboard*/
+

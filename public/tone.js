@@ -15,7 +15,6 @@
   beats.forEach(beat => beat.connect(gain));
 
   const $rows = document.body.querySelectorAll('div > div')
-
   let index = 0;
 
   const active = true;
