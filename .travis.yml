@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+- stable
 
 node_js: 
   - "stable"
@@ -9,3 +11,9 @@ script:
 
 env:
   - PORT=3000
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: hF8PDrDkUfeX1ELZbaCZ15d0RfkBho+YDcR1WjBx2f6xyKaNHylc2+ii/mWj/4lSAwGBs7s5KrRAQXToqWasKafdG5GukCCR/en2tXU832MnM+d17yTlhzSnoSLUM7ToGKKYrp62yMs4RpWDEjZtQNveXU5tTpimajWTYVhcQrkYJsrsrRIaqstwZCKBwA250S1LiI+DLENPX7S30GS2YFJglwzOGN9dCIbGA8MaffWINzI1s5dO1sDaQiXm/L2Eer/seu6bJGDoXkPJKEUVmrf/4vfV5Yw4AJcRcveVdakFdJXG0nl4bko69ENpnjdP+vdEbztNfGYSzg+pHHAqsb0oWHa9zolbyJOXZ625x3fCx4JQMqBJcPT4BQjTG3ma9SpM2WTzWICvWcNG4CbU+/yZP9HkOMSMYhYOi6weq4V8U39x7abTIkz65sEWyDkNYIYIs5p12Y2XCLqwwBHOTnTo+E75C+O+HVuLnUFfkNhlbwxu71u3rY/PyYDkqhlorU24lsA0xYnxHqxr1pFoLO+9KG+HoKiYgvU6u/qjosBKfsGfqe3Fb6jpOXAeKzfyZDUl8TDhEa0joCXKmOqRH/EEZ7AaL0EgfoiyBDyZtDPw7TdRM3AFISg6qGoMgjW8euC6oEP5UGBDlJETV3OYMAisoXaCjDmzIHt3dLYjkhY=
+

@@ -15,4 +15,4 @@ As a User…
 
 
 ```
-<img src="images/music_maker.png">
+<img width="1004" alt="music_maker" src="https://user-images.githubusercontent.com/44870179/59340103-442e2480-8cfd-11e9-81a7-712025774b91.png">
