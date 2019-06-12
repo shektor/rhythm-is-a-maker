@@ -3,5 +3,10 @@ language: node_js
 node_js: 
   - "stable"
 
+script:
+  - npm start &
+  - wait-on http://localhost:3000
+  - npm test
+  
 env:
   - PORT=3000
