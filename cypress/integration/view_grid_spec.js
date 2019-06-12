@@ -13,6 +13,5 @@ describe('My first test', function(){
 it('visits the local host', function(){
  cy.visit('')
 
-  cy.contains('1')
-  cy.get('button').should('have.id', 'd1-1')
+  cy.contains('Rhythm is a Maker')
 })
