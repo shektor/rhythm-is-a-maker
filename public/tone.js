@@ -46,8 +46,10 @@
     }
     let milk = document.querySelector(`.c-${stepX}`)
     milk.innerHTML = stepX + 1
+    milk.style.backgroundColor = 'white'
     let bob = document.querySelector(`.c-${step}`)
-    bob.innerHTML = "Bob"
+    bob.innerHTML = ""
+    bob.style.backgroundColor ='red'
   }
 
   function repeat(time) {
@@ -56,7 +58,6 @@
       let beat = beats[i],
           $row = $rows[i],
           $input = $row.querySelector(`input:nth-child(${step + 1})`);
-          document.querySelector('.hit').innerHTML = step
       if ($input.checked){
         beat.start()
       }
