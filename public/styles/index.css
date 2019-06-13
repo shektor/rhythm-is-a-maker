@@ -1,19 +1,95 @@
+:root{
+  --open:'Open Sans', sans-serif;
+  --Robo:'Roboto', sans-serif;
+}
+body{
+  background-color: #1F2328;
+}
+#title-container {
+  display: flex;
+  justify-content: center;
+}
+
+#title-container h1{
+  font-family: var(--open);
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: bold;
+}
+#title-container h1 .logo{
+  font-size: 20px;
+  color:  #ffff;
+  opacity: 0.5;
+  transition: color 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+
+#title-container h1 .logo:hover{
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 1;
+}
+.instruction-container #instructions li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-family: var(--open);
+  font-size: 10px;
+}
+
 .button {
   height: 40px;
   width: 40px;
   background-color: red;
-  font-size: 10px
+  font-family: var(--Robo);
+  font-size: 8px;
+  color: #ffff;
+  border: none;
 }
 
 .button-active {
-  background-color: blue;
+  background-color: #FFFFFF;
 }
 
+#conter-container th{
+  padding: 10px;
+}
 .counter {
-  height: 40px;
-  width: 40px;
-  border: 1px black solid;
+  height: 10px;
+  width: 10px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
+}
+
+.table-div {
+  display: flex;
+  justify-content: center;
+}
+table{
+  padding: 10px;
+}
+
+.on-container{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.on-container .powerOn, .stop {
+  color: #ffffff;
+  padding: 5px;
+  font-size: 18px;
+  opacity: 0.5;
+  transition: color 500ms cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.on-container .powerOn:hover, .stop:hover{
+  color: #ffffff;
+  opacity: 1;
+}
+
+hr{
+  width: 500px;
+  height: 0.5px;
+  background-color: #fff;
 }
