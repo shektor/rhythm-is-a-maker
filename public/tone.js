@@ -45,7 +45,7 @@
       stepX = step - 1
     }
     let milk = document.querySelector(`.c-${stepX}`)
-    milk.innerHTML = stepX + 1
+    // milk.innerHTML = stepX + 1
     milk.style.backgroundColor = 'white'
     let bob = document.querySelector(`.c-${step}`)
     bob.innerHTML = ""
