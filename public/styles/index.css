@@ -1,0 +1,11 @@
+.counter{
+  display: flex;
+  margin-left: 1px;
+}
+
+.counter h1{
+  font-size: 14px;
+  margin: 5px;
+  padding: 1px;
+  width: 10px;
+}

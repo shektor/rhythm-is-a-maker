@@ -37,14 +37,32 @@
     document.querySelector('.powerOn').style.color = 'red';
   }
 
+  function loopIndex(step){
+    let stepX
+    if (step === 0) {
+      stepX = 15
+    } else {
+      stepX = step - 1
+    }
+    let milk = document.querySelector(`.c-${stepX}`)
+    // milk.innerHTML = stepX + 1
+    milk.style.backgroundColor = 'white'
+    let bob = document.querySelector(`.c-${step}`)
+    bob.innerHTML = ""
+    bob.style.backgroundColor ='red'
+  }
+
   function repeat(time) {
     let step = index % 16;
     for (let i = 0; i < $rows.length; i++) {
       let beat = beats[i],
           $row = $rows[i],
           $input = $row.querySelector(`input:nth-child(${step + 1})`);
-      if ($input.checked) beat.start();
+      if ($input.checked){
+        beat.start()
+      }
     }
+    loopIndex(step)
     index++;
   }
 
