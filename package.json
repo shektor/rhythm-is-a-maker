@@ -7,7 +7,8 @@
     "start": "node server.js",
     "test": "cypress run",
     "dev": "nodemon server.js",
-    "jas": "jasmine"
+    "jas": "jasmine",
+    "karma": "karma start spec/karma.conf.js --single-run"
   },
   "repository": {
     "type": "git",
