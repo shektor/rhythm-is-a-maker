@@ -20,10 +20,10 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome','ChromeHeadless'],
     customLaunchers: {
       Chrome_travis_ci: {
-        base: 'Chrome',
+        base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },
@@ -31,7 +31,7 @@ module.exports = function(config) {
     concurrency: Infinity
 
   }
-  
+
   if (process.env.TRAVIS) {
     configuration.browsers = ['Chrome_travis_ci'];
  }

@@ -1,18 +1,18 @@
 ((exports)=>{
-class BeatPlayer{
-  constructor(tone = Tone){
-    this.tone = tone
-  }
+  class BeatPlayer{
+    constructor(tone = Tone){
+      this.tone = tone
+    }
 
-  createSound(location){
-    return(new this.tone.Player(location).toMaster())
-  }
+    createSound(location){
+      return(new this.tone.Player(location).toMaster())
+    }
 
-  addToBeats(sound){
+    addToBeats(sound){
 
+    }
   }
-}
-exports.BeatPlayer = BeatPlayer
+  exports.BeatPlayer = BeatPlayer
 })(this);
 
 

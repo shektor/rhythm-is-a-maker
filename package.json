@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "karma start spec/karma.conf.js --single-run  cypress run",
+    "test": "karma start spec/karma.conf.js --single-run && cypress run",
     "dev": "nodemon server.js",
     "jas": "jasmine"
   },

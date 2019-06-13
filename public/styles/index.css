@@ -1,11 +1,19 @@
-.counter{
-  display: flex;
-  margin-left: 1px;
+.button {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  font-size: 10px
 }
 
-.counter h1{
-  font-size: 14px;
-  margin: 5px;
-  padding: 1px;
-  width: 10px;
+.button-active {
+  background-color: blue;
+}
+
+.counter {
+  height: 40px;
+  width: 40px;
+  border: 1px black solid;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
 }
