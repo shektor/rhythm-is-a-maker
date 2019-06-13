@@ -34,9 +34,14 @@
             <th><button onclick="toggleButton(this)" class='button' type="button"></button></th>
             <% } %>
           </tr>
+          <tr>
+            <% for (let i = 0; i < 16; i++) { %>
+              <th><div class='counter' id='c-<%= i %>'></div></th>
+              <% } %>
+            </tr>
     </table>
 
-  <div class="counter">
+  <!-- <div class="counter">
     <h1 class="count-loop c-0"></h1>
     <h1 class="count-loop c-1"></h1>
     <h1 class="count-loop c-2"></h1>
@@ -53,7 +58,7 @@
     <h1 class="count-loop c-13"></h1>
     <h1 class="count-loop c-14"></h1>
     <h1 class="count-loop c-15"></h1>
-  </div>
+  </div> -->
     <script src="/socket.js"></script>
     <script src="https://unpkg.com/tone"></script>
     <script
