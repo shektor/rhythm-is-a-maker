@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "cypress run",
-    "dev": "nodemon server.js"
+    "test": "jasmine && cypress run",
+    "dev": "nodemon server.js",
+    "jas": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   },
   "devDependencies": {
     "cypress": "^3.3.1",
-    "nodemon": "^1.19.1"
+    "jasmine": "^3.4.0",
+    "nodemon": "^1.19.1",
+    "tone": "^13.4.9"
   }
 }

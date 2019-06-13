@@ -3,11 +3,12 @@
     if (Tone.context.state !== 'running') Tone.context.resume();
   });
 
+  const beatPlayer = new BeatPlayer(Tone)
   const beats = [
-    new Tone.Player('./sounds/Dry-Kick.wav').toMaster(),
-    new Tone.Player('./sounds/Korg-TR-Rack-Standard-Kit-Snare-Drum.wav').toMaster(),
-    new Tone.Player('./sounds/Closed-Hi-Hat-1.wav').toMaster()
-  ];
+    beatPlayer.createSound('./sounds/Dry-Kick.wav'),
+    beatPlayer.createSound('./sounds/Korg-TR-Rack-Standard-Kit-Snare-Drum.wav'),
+    beatPlayer.createSound('./sounds/Closed-Hi-Hat-1.wav')
+  ]
 
   const gain = new Tone.Gain(0.8);
   gain.toMaster();
