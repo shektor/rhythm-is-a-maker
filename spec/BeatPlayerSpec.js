@@ -1,6 +1,4 @@
-//const BeatPlayer = require('../public/javaScript/BeatPlayer');
-
-describe('BeatMaker', ()=>{
+describe('BeatPlayer', ()=>{
   let Tone;
 
   beforeEach(()=>{

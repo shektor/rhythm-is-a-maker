@@ -20,7 +20,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome','ChromeHeadless'],
+    browsers: ['Chrome'],
     customLaunchers: {
       Chrome_travis_ci: {
         base: 'ChromeHeadless',
