@@ -1,9 +1,4 @@
-
-  // let button = document.getElementById('button-11')
-  //
-  // button.onclick = toggleButton
-
-  function toggleButton(button){
+function toggleButton(button){
 
     let buttonClasses = button.classList;
 
