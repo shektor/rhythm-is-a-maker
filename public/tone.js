@@ -14,7 +14,7 @@
 
   beats.forEach(beat => beat.connect(gain));
 
-  const $rows = document.body.querySelectorAll('div > div')
+  const $rows = document.body.querySelectorAll('tr')
 
   let index = 0;
 
@@ -57,8 +57,8 @@
     for (let i = 0; i < $rows.length; i++) {
       let beat = beats[i],
           $row = $rows[i],
-          $input = $row.querySelector(`input:nth-child(${step + 1})`);
-      if ($input.checked){
+          $button = $row.querySelector(`th:nth-child(${step + 1}) > button`);
+      if ($button.classList.contains('button-active')){
         beat.start()
       }
     }
