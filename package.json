@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jasmine && cypress run",
+    "test": "cypress run",
     "dev": "nodemon server.js",
     "jas": "jasmine"
   },
@@ -29,6 +29,10 @@
   "devDependencies": {
     "cypress": "^3.3.1",
     "jasmine": "^3.4.0",
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
     "nodemon": "^1.19.1",
     "tone": "^13.4.9"
   }
