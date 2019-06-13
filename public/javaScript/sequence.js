@@ -7,6 +7,4 @@ function toggleButton(button){
     } else {
       buttonClasses.add('button-active')
     };
-
-
   };
