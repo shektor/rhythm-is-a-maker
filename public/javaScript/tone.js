@@ -13,8 +13,8 @@
   const gain = new Tone.Gain(0.8);
   gain.toMaster();
 
-  beats.forEach(beat => beat.connect(gain));
-
+  
+  
   const $rows = document.body.querySelectorAll('div > div')
 
   let index = 0;
