@@ -14,7 +14,7 @@
 
   beats.forEach(beat => beat.connect(gain));
 
-  const $rows = document.body.querySelectorAll('div > div')
+  const $rows = document.body.querySelectorAll('tr')
 
   let index = 0;
 
@@ -44,21 +44,21 @@
     } else {
       stepX = step - 1
     }
-    let milk = document.querySelector(`.c-${stepX}`)
+    let milk = document.querySelector(`#c-${stepX}`)
     // milk.innerHTML = stepX + 1
     milk.style.backgroundColor = 'white'
-    let bob = document.querySelector(`.c-${step}`)
+    let bob = document.querySelector(`#c-${step}`)
     bob.innerHTML = ""
-    bob.style.backgroundColor ='red'
+    bob.style.backgroundColor ='green'
   }
 
   function repeat(time) {
     let step = index % 16;
-    for (let i = 0; i < $rows.length; i++) {
+    for (let i = 0; i < 3; i++) {
       let beat = beats[i],
           $row = $rows[i],
-          $input = $row.querySelector(`input:nth-child(${step + 1})`);
-      if ($input.checked){
+          $button = $row.querySelector(`th:nth-child(${step + 1}) > button`);
+      if ($button.classList.contains('button-active')){
         beat.start()
       }
     }

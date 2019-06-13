@@ -9,7 +9,7 @@
   <body>
     <h1>Rhythm is a Maker</h1>
     <ul>
-      <li>Click on the checkboxes to compose your beat</li>
+      <li>Click on the buttons to compose your beat</li>
       <li>Press the <strong>play</strong> button to start the loop</li>
       <li>Press the <strong>stop</strong> button to end the loop</li>
     </ul>
@@ -18,82 +18,32 @@
       <i class="fas fa-play powerOn"></i>
       <i class="fas fa-stop-circle stop"></i>
     </div>
-    <div>
-      <div>
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-        </div>
-
-        <div>
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-          <input type="checkbox">
-        </div>
-
-        <div>
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-  </div>
-  <div class="counter">
-    <h1 class="count-loop c-0"></h1>
-    <h1 class="count-loop c-1"></h1>
-    <h1 class="count-loop c-2"></h1>
-    <h1 class="count-loop c-3"></h1>
-    <h1 class="count-loop c-4"></h1>
-    <h1 class="count-loop c-5"></h1>
-    <h1 class="count-loop c-6"></h1>
-    <h1 class="count-loop c-7"></h1>
-    <h1 class="count-loop c-8"></h1>
-    <h1 class="count-loop c-9"></h1>
-    <h1 class="count-loop c-10"></h1>
-    <h1 class="count-loop c-11"></h1>
-    <h1 class="count-loop c-12"></h1>
-    <h1 class="count-loop c-13"></h1>
-    <h1 class="count-loop c-14"></h1>
-    <h1 class="count-loop c-15"></h1>
-  </div>
+    <table>
+      <tr>
+        <th><button id='button-11'onclick="toggleButton(this)" class='button' type="button">Kick</button></th>
+        <% for (let i = 0; i < 15; i++) { %>
+        <th><button id='button-1<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
+        <% } %>
+      </tr>
+      <tr>
+        <th><button id='button-21'onclick="toggleButton(this)" class='button' type="button">Snare  </button></th>
+        <% for (let i = 0; i < 15; i++) { %>
+        <th><button id='button-2<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
+        <% } %>
+      </tr>
+      <tr>
+        <th><button id='button-31'onclick="toggleButton(this)" class='button' type="button">Hi-hat</button></th>
+        <% for (let i = 0; i < 15; i++) { %>
+        <th><button id='button-3<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
+        <% } %>
+      </tr>
+      <tr>
+        <% for (let i = 0; i < 16; i++) { %>
+        <th><div class='counter' id='c-<%= i %>'></div></th>
+        <% } %>
+      </tr>
+    </table>
+    
     <script src="/socket.js"></script>
     <script src="https://unpkg.com/tone"></script>
     <script
@@ -101,5 +51,8 @@
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
     <script src="/tone.js"></script>
+    <script src="/sequence.js">
+
+    </script>
   </body>
 </html>
