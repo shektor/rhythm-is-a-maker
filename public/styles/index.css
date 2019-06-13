@@ -2,6 +2,7 @@
   height: 40px;
   width: 40px;
   background-color: red;
+  font-size: 10px
 }
 
 .button-active {
@@ -12,10 +13,9 @@
   height: 40px;
   width: 40px;
   border: 1px black solid;
-
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
 }
 
 /* .counter{
