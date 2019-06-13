@@ -22,44 +22,28 @@
       <tr>
         <th><button id='button-11'onclick="toggleButton(this)" class='button' type="button">Kick</button></th>
         <% for (let i = 0; i < 15; i++) { %>
-          <th><button id='button-1<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
-          <% } %>
+        <th><button id='button-1<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
+        <% } %>
       </tr>
+      <tr>
         <th><button id='button-21'onclick="toggleButton(this)" class='button' type="button">Snare  </button></th>
         <% for (let i = 0; i < 15; i++) { %>
-          <th><button id='button-2<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
-          <% } %>
+        <th><button id='button-2<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
+        <% } %>
       </tr>
+      <tr>
         <th><button id='button-31'onclick="toggleButton(this)" class='button' type="button">Hi-hat</button></th>
         <% for (let i = 0; i < 15; i++) { %>
-          <th><button id='button-3<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
-          <% } %>
+        <th><button id='button-3<%= i + 2 %>'onclick="toggleButton(this)" class='button' type="button"></button></th>
+        <% } %>
       </tr>
-          <tr>
-            <% for (let i = 0; i < 16; i++) { %>
-              <th><div class='counter' id='c-<%= i %>'></div></th>
-              <% } %>
-            </tr>
+      <tr>
+        <% for (let i = 0; i < 16; i++) { %>
+        <th><div class='counter' id='c-<%= i %>'></div></th>
+        <% } %>
+      </tr>
     </table>
-
-  <!-- <div class="counter">
-    <h1 class="count-loop c-0"></h1>
-    <h1 class="count-loop c-1"></h1>
-    <h1 class="count-loop c-2"></h1>
-    <h1 class="count-loop c-3"></h1>
-    <h1 class="count-loop c-4"></h1>
-    <h1 class="count-loop c-5"></h1>
-    <h1 class="count-loop c-6"></h1>
-    <h1 class="count-loop c-7"></h1>
-    <h1 class="count-loop c-8"></h1>
-    <h1 class="count-loop c-9"></h1>
-    <h1 class="count-loop c-10"></h1>
-    <h1 class="count-loop c-11"></h1>
-    <h1 class="count-loop c-12"></h1>
-    <h1 class="count-loop c-13"></h1>
-    <h1 class="count-loop c-14"></h1>
-    <h1 class="count-loop c-15"></h1>
-  </div> -->
+    
     <script src="/socket.js"></script>
     <script src="https://unpkg.com/tone"></script>
     <script
