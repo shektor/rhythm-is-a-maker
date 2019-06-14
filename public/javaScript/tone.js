@@ -10,7 +10,9 @@
     beatPlayer.createSound('./sounds/Closed-Hi-Hat-1.wav'),
     beatPlayer.createSound('./sounds/Korg-NS5R-Open-Hi-Hat.wav'),
     beatPlayer.createSound('./sounds/Clap-3.wav'),
-    beatPlayer.createSound('./sounds/Cowbell-3.wav')
+    beatPlayer.createSound('./sounds/Cowbell-3.wav'),
+    beatPlayer.createSound('./sounds/whitney.wav'),
+    beatPlayer.createSound('./sounds/james_b.wav')
   ]
 
   beats.forEach(beat => beat.connect(beatPlayer.createGain(0.9)));
