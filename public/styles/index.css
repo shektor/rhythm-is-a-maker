@@ -47,36 +47,40 @@ body{
   border: none;
 }
 
+ th:nth-child(4n+1) .button  {
+  background-color: #777777;
+}
+
 .button-active.row-1 {
-  background-color: #FF1102;
+  background-color: #FF1102 !important;
 }
 
 .button-active.row-2 {
-  background-color: #FFB602;
+  background-color: #FFB602 !important;
 }
 
 .button-active.row-3 {
-  background-color: #D5FF02;
+  background-color: #D5FF02 !important;
 }
 
 .button-active.row-4 {
-  background-color: #06FF02;
+  background-color: #06FF02 !important;
 }
 
 .button-active.row-5 {
-  background-color: #02FFFB;
+  background-color: #02FFFB !important;
 }
 
 .button-active.row-6 {
-  background-color: #1D02FF;
+  background-color: #1D02FF !important;
 }
 
 .button-active.row-7 {
-  background-color: #7902FF;
+  background-color: #7902FF !important;
 }
 
 .button-active.row-8 {
-  background-color: #F702FF;
+  background-color: #F702FF !important;
 }
 
 #conter-container th{
