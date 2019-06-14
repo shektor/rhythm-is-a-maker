@@ -29,14 +29,14 @@
   }
 
   document.querySelector('.stop').onclick = ()=> {
-    Tone.Transport.stop();
+    beatPlayer.stop();
     document.querySelector('.powerOn').style.color = 'green';
     document.getElementsByClassName('myCheck').checked = false;
   }
 
   document.querySelector('.powerOn').onclick = ()=> {
     document.querySelector('.powerOn').style.color = 'red';
-    Tone.Transport.start();
+    beatPlayer.start();
     document.querySelector('.powerOn').style.color = 'red';
   }
 
