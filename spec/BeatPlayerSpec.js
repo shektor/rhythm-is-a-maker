@@ -9,12 +9,20 @@ describe('BeatPlayer', ()=>{
       },
       Gain: function(value) {
         return value;
+      },
+      
+      Transport: {
+        stop: function(){
+          return Tone.Transport
+        }
       }
     }
+
 
     TonePlayer = {
       toMaster: function() {}
     }
+
 
     beatPlayer = new BeatPlayer(Tone);
   });
@@ -40,5 +48,11 @@ describe('BeatPlayer', ()=>{
       expect(TonePlayer.toMaster).toHaveBeenCalled()
     })
   });
+
+  describe('#start', ()=>{
+    it('stops the transport and all sources synced to the transport.', ()=>{
+      expect(beatPlayer.stop()).toBe(Tone.Transport)
+    });
+  })
 });
 

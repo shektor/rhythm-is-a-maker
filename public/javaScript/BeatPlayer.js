@@ -11,6 +11,10 @@
     createGain(value){
       return(new this.tone.Gain(value).toMaster())
     }
+
+    stop(){
+      return this.tone.Transport.stop();
+    }
   }
   exports.BeatPlayer = BeatPlayer
 })(this);
