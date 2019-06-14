@@ -4,9 +4,9 @@ describe('sound grid', function(){
     cy.contains('Rhythm Is A Maker')
   });
 
- it('can see sound grid', function(){
+  it('can see sound grid', function(){
    cy.visit('/')
-   cy.contains('#button-11')
-   cy.contains('#button-216')
+   cy.get('#button-12').should('be.empty')
+   cy.get('#button-216').should('be.empty')
   })
 });
