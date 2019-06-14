@@ -1,29 +1,44 @@
 describe('BeatPlayer', ()=>{
-  let Tone, beatPlayer;
+  let beatPlayer, Tone, TonePlayer, url;
 
   beforeEach(()=>{
-    Tone = jasmine.createSpyObj('Tone', ['Player', 'Gain']);
-    Player = jasmine.createSpyObj('Player', ['toMaster'])
-    Gain = jasmine.createSpyObj('Gain',['toMaster'] )
+    Tone = {
+      Player: function(location) {
+        url = location
+        return TonePlayer;
+      },
+      Gain: function(value) {
+        return value;
+      }
+    }
 
-    Tone.Player.and.returnValue(Player);
-    Player.toMaster.and.returnValue('./sounds/Dry-Kick.wav');
-    Tone.Gain.and.returnValue(Gain);
-    Gain.toMaster.and.returnValue(0.5);
+    TonePlayer = {
+      toMaster: function() {}
+    }
+
     beatPlayer = new BeatPlayer(Tone);
-
   });
 
   describe('#createSound', ()=>{
-    it('Connects sound to the master output', ()=>{
-      let beatPlayer = new BeatPlayer(Tone);
-      expect(beatPlayer.createSound('./sounds/Dry-Kick.wav')).toBe('./sounds/Dry-Kick.wav')
+    it('accepts a file location', ()=>{
+      let location = './sounds/Dry-Kick.wav'
+      beatPlayer.createSound(location)
+      expect(url).toBe(location)
+    });
+
+    it('connects to master output', ()=>{
+      spyOn(TonePlayer, 'toMaster')
+      beatPlayer.createSound('./sounds/Dry-Kick.wav')
+      expect(TonePlayer.toMaster).toHaveBeenCalled()
     });
   });
 
   describe('#createGain', ()=>{
     it('Takes a number and map that number to the speaker', ()=>{
-      expect(beatPlayer.createGain(0.5)).toBe(0.5)
+      spyOn(TonePlayer, 'toMaster')
+      beatPlayer.createSound(0.6)
+      expect(TonePlayer.toMaster).toHaveBeenCalled()
     })
   });
 });
+
