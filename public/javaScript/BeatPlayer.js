@@ -8,7 +8,8 @@
       return(new this.tone.Player(location).toMaster())
     }
 
-    addToBeats(sound){
+    createGain(value){
+      return(new this.tone.Gain(value).toMaster())
     }
   }
   exports.BeatPlayer = BeatPlayer
