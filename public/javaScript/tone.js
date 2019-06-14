@@ -7,7 +7,8 @@
   const beats = [
     beatPlayer.createSound('./sounds/Dry-Kick.wav'),
     beatPlayer.createSound('./sounds/Korg-TR-Rack-Standard-Kit-Snare-Drum.wav'),
-    beatPlayer.createSound('./sounds/Closed-Hi-Hat-1.wav')
+    beatPlayer.createSound('./sounds/Closed-Hi-Hat-1.wav'),
+    beatPlayer.createSound('./sounds/Guitar.wav')
   ]
 
   const gain = new Tone.Gain(0.8);
@@ -52,7 +53,7 @@
 
   function repeat(time) {
     let step = index % 16;
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       let beat = beats[i],
           $row = $rows[i],
           $button = $row.querySelector(`th:nth-child(${step + 1}) > button`);
