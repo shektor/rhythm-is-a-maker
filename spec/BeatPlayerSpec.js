@@ -26,5 +26,4 @@ describe('BeatPlayer', ()=>{
       expect(beatPlayer.createGain(0.5)).toBe(0.5)
     })
   });
-
 });
