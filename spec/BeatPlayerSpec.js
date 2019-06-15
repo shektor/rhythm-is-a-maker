@@ -17,6 +17,9 @@ describe('BeatPlayer', ()=>{
         },
         start: function(){
           return Tone.Transport
+        },
+        sheduleRepeat: function(repeatFunction, note){
+          return(4)
         }
       }
 
@@ -60,7 +63,13 @@ describe('BeatPlayer', ()=>{
   describe('#stop', ()=>{
     it('Start the transport and all sources synced to the transport.', ()=>{
       expect(beatPlayer.start()).toBe(Tone.Transport)
-    })
-  })
+    });
+  });
+
+  describe('#scheduleRepeate', ()=>{
+    xit('Schedule a repeated event along the timeline', ()=>{
+
+    });
+  });
 });
 
