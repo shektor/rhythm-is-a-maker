@@ -7,7 +7,7 @@ describe('client chat', function(){
       .should('have.value', 'a message')
   });
 
-  it('adds a message to the window', function(){
+  xit('adds a message to the window', function(){
     cy.visit('/')
 
     cy.get('#input')
