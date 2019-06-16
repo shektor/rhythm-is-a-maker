@@ -2,6 +2,7 @@
 
 const express = require('express');
 const SocketServer = require('ws').Server;
+const ChatMessage = require('./server/ChatMessage.js');
 
 const PORT = process.env.PORT || 3000;
 

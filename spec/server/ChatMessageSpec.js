@@ -18,7 +18,7 @@ describe('ChatMessage', () => {
   describe('#jsonCreate', () => {
     it('creates a json object', () => {
       let json = { type: 'message', data: 'A great message!' }
-      expect(chatMessage.jsonParse()).toEqual(json)
+      expect(chatMessage.jsonCreate()).toEqual(json)
     })
   })
 

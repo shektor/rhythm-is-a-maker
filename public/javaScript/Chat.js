@@ -39,7 +39,7 @@ const chat = new Chat('#input', '#content', $)
 
 chat.inputArea().keydown((key) => {
   if (chat.isKeyCodeEnter(key)) {
-    chat.printMessage(chat.getMessage())
+    ws.send(JSON.stringify({ type: 'message', data: chat.getMessage() }))
     chat.clearInput()
   }
 })
