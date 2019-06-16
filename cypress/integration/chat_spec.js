@@ -14,6 +14,6 @@ describe('client chat', function(){
       .type('a message')
       .type('{enter}').trigger('input')
 
-    cy.contains('a message')
+    cy.contains('a message').should('be.visible')
   });
 });
