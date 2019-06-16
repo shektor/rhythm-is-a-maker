@@ -11,8 +11,7 @@ describe('client chat', function(){
     cy.visit('/')
 
     cy.get('#input')
-      .type('a message')
-      .type('{enter}').trigger('input')
+      .type('a message{enter}')
 
     cy.contains('a message').should('be.visible')
   });
