@@ -1,6 +1,14 @@
 const HOST = location.origin.replace(/^http/, 'ws');
 const ws = new WebSocket(HOST);
+
 const content = $('#content');
+const status = $('#status');
+const input = $('#input');
+
+ws.onopen = () => {
+  input.removeAttr('disabled');
+  status.text('Message:');
+};
 
 ws.onmessage = (message) => {
   let json = JSON.parse(message.data)
