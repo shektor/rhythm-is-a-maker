@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jasmine && karma start spec/karma.conf.js --single-run && cypress run",
+    "test": "nyc jasmine && karma start spec/karma.conf.js --single-run && cypress run",
     "dev": "nodemon server.js",
     "jas": "nyc jasmine",
     "coverage": "nyc report --reporter=text-lcov | coveralls",

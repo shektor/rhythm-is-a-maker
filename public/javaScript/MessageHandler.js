@@ -6,3 +6,12 @@ ws.onmessage = (message) => {
   let json = JSON.parse(message.data)
   content.prepend('<p>' + json.data + '</p>')
 }
+
+const chat = new Chat('#input', '#content', $)
+
+chat.inputArea().keydown((key) => {
+  if (chat.isKeyCodeEnter(key)) {
+    ws.send(JSON.stringify({ type: 'message', data: chat.getMessage() }))
+    chat.clearInput()
+  }
+})
