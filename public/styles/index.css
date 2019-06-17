@@ -125,3 +125,8 @@ hr{
   height: 0.5px;
   background-color: #fff;
 }
+
+.keyboard-container {
+  display: flex;
+  justify-content: center;
+}
