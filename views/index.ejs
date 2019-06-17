@@ -75,21 +75,25 @@
       </tr>
       <tr id='conter-container'>
         <% for (let i = 0; i < 16; i++) { %>
-        <th><div class='counter' id='c-<%= i %>'></div></th>
+        <th>
+          <div class='counter' id='c-<%= i %>'></div>
+        </th>
         <% } %>
       </tr>
     </table>
-   </div>
-
-    <script src="/javaScript/socket.js"></script>
-    <script src="/javaScript/BeatPlayer.js"></script>
-    <script src="https://unpkg.com/tone"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-    <script src="/javaScript/tone.js"></script>
-    <script src="/javaScript/sequence.js">
-    </script>
-  </body>
+  </div>
+  <div>
+    <span id="status">Connecting...</span>
+    <input type="text" id="input" placeholder="Chat with everyone!">
+  </div>
+  <div id="content"></div>
+  <script src="/javaScript/BeatPlayer.js"></script>
+  <script src="https://unpkg.com/tone"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="/javaScript/MessageHandler.js"></script>
+  <script src="/javaScript/Chat.js"></script>
+  <script src="/javaScript/tone.js"></script>
+  <script src="/javaScript/sequence.js">
+  </script>
+</body>
 </html>

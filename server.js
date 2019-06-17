@@ -2,6 +2,7 @@
 
 const express = require('express');
 const SocketServer = require('ws').Server;
+const ChatMessage = require('./server/ChatMessage.js');
 
 const PORT = process.env.PORT || 3000;
 
@@ -11,9 +12,17 @@ const server = express()
   .set('view engine', 'ejs')
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-const wss = new SocketServer({ server });
+const webSocketServer = new SocketServer({ server });
 
-wss.on('connection', (ws) => {
+webSocketServer.on('connection', (webSocket) => {
   console.log('Client connected');
-  ws.on('close', () => console.log('Client disconnected'));
+
+  webSocket.on('message', (message) => {
+    console.log('** onMessage **')
+    let chatMessage = new ChatMessage(message)
+    webSocketServer.clients.forEach((client) => {
+      client.send(chatMessage.jsonStringify());
+    })
+  })
+  webSocket.on('close', () => console.log('Client disconnected'));
 });
