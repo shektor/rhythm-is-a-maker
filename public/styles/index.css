@@ -103,12 +103,12 @@ table{
   padding: 10px;
 }
 
-.on-container{
+.on-container, .bpm{
   display: flex;
   justify-content: center;
   padding: 5px;
 }
-.on-container .powerOn, .stop {
+.on-container .powerOn, .stop, .bpm {
   color: #ffffff;
   padding: 5px;
   font-size: 18px;
