@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3000;
 const server = express()
   .use(express.static('public'))
   .use('/', require('./routes/index'))
+  .use('*', require('./routes/errors/error404'))
   .set('view engine', 'ejs')
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 

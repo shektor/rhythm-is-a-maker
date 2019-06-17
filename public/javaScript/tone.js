@@ -28,6 +28,14 @@
     Tone.Transport.scheduleRepeat(repeat, '8n');
   }
 
+  document.getElementById('bpm').addEventListener('input', e => {
+  Tone.Transport.bpm.value = +e.target.value
+})
+
+  document.getElementById('bpm').onchange=function(){
+    document.getElementById('v').innerHTML = this.value;
+};
+
   document.querySelector('.stop').onclick = ()=> {
     beatPlayer.stop();
     document.querySelector('.powerOn').style.color = 'green';
