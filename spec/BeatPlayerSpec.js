@@ -56,13 +56,13 @@ describe('BeatPlayer', ()=>{
 
   describe('#start', ()=>{
     it('stops the transport and all sources synced to the transport.', ()=>{
-      expect(beatPlayer.stop()).toBe(Tone.Transport)
+      expect(beatPlayer.start()).toBe(Tone.Transport)
     });
   })
 
   describe('#stop', ()=>{
     it('Start the transport and all sources synced to the transport.', ()=>{
-      expect(beatPlayer.start()).toBe(Tone.Transport)
+      expect(beatPlayer.stop()).toBe(Tone.Transport)
     });
   });
 
