@@ -1,9 +1,8 @@
-const HOST = location.origin.replace(/^http/, 'ws');
-const ws = new WebSocket(HOST);
-
-const content = $('#content');
-const status = $('#status');
-const input = $('#input');
+const HOST = location.origin.replace(/^http/, 'ws'),
+  ws = new WebSocket(HOST),
+  content = $('#content'),
+  status = $('#status'),
+  input = $('#input');
 
 ws.onopen = () => {
   input.removeAttr('disabled');
