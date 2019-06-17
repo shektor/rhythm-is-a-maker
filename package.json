@@ -2,9 +2,9 @@
   "name": "rhythm-is-a-maker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server/server.js",
     "test": "nyc jasmine && karma start spec/karma.conf.js --single-run && cypress run",
     "dev": "nodemon server.js",
     "jas": "nyc jasmine",

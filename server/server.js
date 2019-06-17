@@ -2,7 +2,7 @@
 
 const express = require('express');
 const SocketServer = require('ws').Server;
-const ChatMessage = require('./server/ChatMessage.js');
+const ChatMessage = require('./model/ChatMessage.js');
 
 const PORT = process.env.PORT || 3000;
 
@@ -11,6 +11,7 @@ const server = express()
   .use('/', require('./routes/index'))
   .use('*', require('./routes/errors/error404'))
   .set('view engine', 'ejs')
+  .set('views', './server/views')
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 const webSocketServer = new SocketServer({ server });

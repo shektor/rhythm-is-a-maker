@@ -1,4 +1,8 @@
 {
+  "pluginsFile": false,
+  "supportFile": false,
+  "screenshotsFolder": "./spec/integration/screenshots",
+  "integrationFolder": "./spec/integration",
   "video": false,
   "baseUrl": "http://localhost:3000/"
 }

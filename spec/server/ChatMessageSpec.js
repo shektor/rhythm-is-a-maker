@@ -1,4 +1,4 @@
-const ChatMessage = require('../../server/ChatMessage.js')
+const ChatMessage = require('../../server/model/ChatMessage')
 
 describe('ChatMessage', () => {
   let chatMessage, clientMessage;
