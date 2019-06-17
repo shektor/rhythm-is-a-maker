@@ -1,12 +1,6 @@
 :root{
   --open:'Open Sans', sans-serif;
   --Robo:'Roboto', sans-serif;
-  --Fido :'Fredoka One', cursive;
-  --russ: 'Russo One', sans-serif;
-  --press: 'Press Start 2P', cursive;
-  --baloo: 'Baloo', cursive;
-  --titan: 'Titan One', cursive;
-  --rubik: 'Rubik Mono One', sans-serif;
 }
 body{
   background-color: #1F2328;
@@ -17,7 +11,7 @@ body{
 }
 
 #title-container h1{
-  font-family: var(--russ);
+  font-family: 'Permanent Marker', cursive;
   color: #ffffff;
   font-size: 60px;
   font-weight: bold;
@@ -44,8 +38,8 @@ body{
 }
 
 .button {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background-color: #B4B4B4;
   font-family: var(--Robo);
   font-size: 8px;
@@ -127,13 +121,7 @@ table{
   opacity: 1;
 }
 
-/* hr{
-  width: 500px;
-  height: 0.5px;
-  background-color: #fff;
-} */
-
 /*Drum Pad icons*/
 .kick{
-  width: 20px;
+  width: 16px;
 }
