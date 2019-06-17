@@ -17,6 +17,9 @@ describe('BeatPlayer', ()=>{
         },
         start: function(){
           return Tone.Transport
+        },
+        sheduleRepeat: function(repeatFunction, note){
+          return(4)
         }
       }
 
@@ -52,15 +55,21 @@ describe('BeatPlayer', ()=>{
   });
 
   describe('#start', ()=>{
-    it('stops the transport and all sources synced to the transport.', ()=>{
-      expect(beatPlayer.stop()).toBe(Tone.Transport)
+    it('starts the transport and all sources synced to the transport.', ()=>{
+      expect(beatPlayer.start()).toBe(Tone.Transport)
     });
   })
 
   describe('#stop', ()=>{
-    it('Stop the transport and all sources synced to the transport.', ()=>{
+    it('Stops the transport and all sources synced to the transport.', ()=>{
       expect(beatPlayer.stop()).toBe(Tone.Transport)
-    })
-  })
+    });
+  });
+
+  describe('#scheduleRepeate', ()=>{
+    xit('Schedule a repeated event along the timeline', ()=>{
+    });
+  });
+
 });
 

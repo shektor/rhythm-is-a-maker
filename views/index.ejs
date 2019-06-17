@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/index.css">
-  <title></title>
-</head>
-
-<body>
-  <div id='title-container'>
-    <h1>Rhythm Is A Maker <i class="fab fa-spotify logo"></i></h1>
-  </div>
-
-  <div class="instruction-container container">
-    <ul id='instructions'>
-      <li>Click on the buttons to compose your beat.</li>
-      <li>Press the play button to start the loop.</li>
-      <li>Press the stop button to end the loop.</li>
-    </ul>
-  </div>
-
-  <hr>
-  <div class="on-container">
-    <i class="fas fa-play powerOn"></i>
-    <i class="fas fa-stop-circle stop"></i>
-  </div>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title></title>
+  </head>
+  <body>
+    <div id='title-container'>
+      <h1>Rhythm Is A Maker.</h1>
+    </div>
+    <!-- <div class="instruction-container container">
+      <ul id='instructions'>
+        <li>Click on the buttons to compose your beat.</li>
+        <li>Press the play button to start the loop.</li>
+        <li>Press the stop button to end the loop.</li>
+      </ul>
+    </div> -->
+    <div class="on-container">
+      <i class="fas fa-play powerOn"></i>
+      <i class="fas fa-stop-circle stop"></i>
+    </div>
   <div class="table-div">
     <table>
       <tr>
-        <th><button id='button-11'onclick="toggleButton(this)" class='button row-1' type="button">Kick</button></th>
+        <th><button id='button-11'onclick="toggleButton(this)" class='button row-1' type="button"><img class ='kick'src='/drumsvg/drum.svg' alt='drumkick'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-1<%= i + 2 %>'onclick="toggleButton(this)" class='button row-1' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-21'onclick="toggleButton(this)" class='button row-2' type="button">Snare  </button></th>
+        <th><button id='button-21'onclick="toggleButton(this)" class='button row-2' type="button"><img class ='kick'src='/drumsvg/snare.svg' alt='snare'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-2<%= i + 2 %>'onclick="toggleButton(this)" class='button row-2' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-31'onclick="toggleButton(this)" class='button row-3' type="button">Hi-hat</button></th>
+        <th><button id='button-31'onclick="toggleButton(this)" class='button row-3' type="button"><img class ='kick'src='/drumsvg/hi-hat.svg' alt='hi-hat'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-3<%= i + 2 %>'onclick="toggleButton(this)" class='button row-3' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-41'onclick="toggleButton(this)" class='button row-4' type="button">Open Hi-hat</button></th>
+        <th><button id='button-41'onclick="toggleButton(this)" class='button row-4' type="button"><img class ='kick'src='/drumsvg/open-hi-hat.svg' alt='open-hi-hat'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-4<%= i + 2 %>'onclick="toggleButton(this)" class='button row-4' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-51'onclick="toggleButton(this)" class='button row-5' type="button">Clap</button></th>
+        <th><button id='button-51'onclick="toggleButton(this)" class='button row-5' type="button"><img class ='kick'src='/drumsvg/clap.svg' alt='clap'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-5<%= i + 2 %>'onclick="toggleButton(this)" class='button row-5' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-61'onclick="toggleButton(this)" class='button row-6' type="button">Cowbell</button></th>
+        <th><button id='button-61'onclick="toggleButton(this)" class='button row-6' type="button">   <img class ='kick'src='/drumsvg/cowbell.svg' alt='cowbell'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-6<%= i + 2 %>'onclick="toggleButton(this)" class='button row-6' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-71'onclick="toggleButton(this)" class='button row-7' type="button">whitney</button></th>
+        <th><button id='button-71'onclick="toggleButton(this)" class='button row-7' type="button"><img class ='kick'src='/drumsvg/soul.svg' alt='soul'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-7<%= i + 2 %>'onclick="toggleButton(this)" class='button row-7' type="button"></button></th>
         <% } %>
       </tr>
       <tr>
-        <th><button id='button-81'onclick="toggleButton(this)" class='button row-8' type="button">james_b</button></th>
+        <th><button id='button-81'onclick="toggleButton(this)" class='button row-8' type="button"><img class ='kick'src='/drumsvg/funk.svg' alt='funk'></button></th>
         <% for (let i = 0; i < 15; i++) { %>
         <th><button id='button-8<%= i + 2 %>'onclick="toggleButton(this)" class='button row-8' type="button"></button></th>
         <% } %>
@@ -100,5 +96,4 @@
   <script src="/javaScript/sequence.js">
   </script>
 </body>
-
 </html>
