@@ -1,25 +1,27 @@
 <h1 align='center'>
   Rhythm Is A Maker.
 </h1>
-
-
+<p align="center">
+<img src="https://img.shields.io/travis/shektor/rhythm-is-a-maker.svg">
+<img src="https://img.shields.io/coveralls/github/shektor/rhythm-is-a-maker.svg">
+</p>
 
 <h1 align='center'>
  Team.
 </h1>
 
 |  **Team Collaborators** | Scott Hall|   Frankie Bamgboye| Michael Darmody | Steven Hektor| Sarpong Abasimi |
-|-------                  |---------- |--------------     |-----------      |------------|-----------|
+| :---:                  | :-----: | :-------:     | :------:      |:-------: | :-----:|
 |**Github Profile**       |<a href='https://github.com/HottScall'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a> |<a href='https://github.com/FrankieBoye'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/Michael-Darmody'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/shektor'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/SarpongAbasimi'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|
 
 <h4 align='center'>
 How To Use Application.
 </h4>
 
-- ``Fork`` and ``clone`` this repo.
-- ``Open`` terminal and ``cd`` into ``rhythms-is-a-maker``.
+- ``clone`` this repo.
+- Open terminal and ``cd`` into ``rhythms-is-a-maker``.
 - In terminal, type ``npm install`` to install dependencies.
-- To run ``test`` type ``npm test``.
+- To run tests type ``npm test``.
 - To run server type ``npm run dev``.
 - click on this **[link](http://localhost:3000/)**.
 
@@ -66,12 +68,6 @@ Challenges.
 
 - Configuring ``Karma``.
 - Setting up ``Travis`` Properly.
-
-<h4 align='center'>
-App Goal.
-</h4>
-
-<img width="1004" alt="music_maker" src="https://user-images.githubusercontent.com/44870179/59340103-442e2480-8cfd-11e9-81a7-712025774b91.png">
 
 
 |      TECH STACK                                      |

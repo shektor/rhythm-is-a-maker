@@ -15,6 +15,9 @@ script:
   - npm start &
   - npm test
 
+after_success: 
+  - npm run coverage
+
 env:
   - PORT=3000
 
