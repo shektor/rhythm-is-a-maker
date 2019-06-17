@@ -3,6 +3,7 @@ describe('BeatPlayer', ()=>{
 
   beforeEach(()=>{
     Tone = {
+
       Player: function(location) {
         url = location
         return TonePlayer;
@@ -10,19 +11,23 @@ describe('BeatPlayer', ()=>{
       Gain: function(value) {
         return value;
       },
-      
       Transport: {
         stop: function(){
           return Tone.Transport
+        },
+        start: function(){
+          return Tone.Transport
+        },
+        sheduleRepeat: function(repeatFunction, note){
+          return(4)
         }
       }
-    }
 
+    };
 
     TonePlayer = {
       toMaster: function() {}
     }
-
 
     beatPlayer = new BeatPlayer(Tone);
   });
@@ -50,9 +55,21 @@ describe('BeatPlayer', ()=>{
   });
 
   describe('#start', ()=>{
-    it('stops the transport and all sources synced to the transport.', ()=>{
-      expect(beatPlayer.stop()).toBe(Tone.Transport)
+    it('starts the transport and all sources synced to the transport.', ()=>{
+      expect(beatPlayer.start()).toBe(Tone.Transport)
     });
   })
+
+  describe('#stop', ()=>{
+    it('Stops the transport and all sources synced to the transport.', ()=>{
+      expect(beatPlayer.stop()).toBe(Tone.Transport)
+    });
+  });
+
+  describe('#scheduleRepeate', ()=>{
+    xit('Schedule a repeated event along the timeline', ()=>{
+    });
+  });
+
 });
 

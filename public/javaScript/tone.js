@@ -28,15 +28,23 @@
     Tone.Transport.scheduleRepeat(repeat, '8n');
   }
 
+  document.getElementById('bpm').addEventListener('input', e => {
+  Tone.Transport.bpm.value = +e.target.value
+})
+
+  document.getElementById('bpm').onchange=function(){
+    document.getElementById('v').innerHTML = this.value;
+};
+
   document.querySelector('.stop').onclick = ()=> {
-    Tone.Transport.stop();
+    beatPlayer.stop();
     document.querySelector('.powerOn').style.color = 'green';
     document.getElementsByClassName('myCheck').checked = false;
   }
 
   document.querySelector('.powerOn').onclick = ()=> {
     document.querySelector('.powerOn').style.color = 'red';
-    Tone.Transport.start();
+    beatPlayer.start();
     document.querySelector('.powerOn').style.color = 'red';
   }
 
