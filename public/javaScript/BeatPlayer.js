@@ -9,7 +9,15 @@
     }
 
     createGain(value){
-      return(new this.tone.Gain(value).toMaster())
+      return(new this.tone.Gain(value).toMaster());
+    }
+
+    stop(){
+      return(this.tone.Transport.stop());
+    }
+
+    start(){
+      return(this.tone.Transport.start());
     }
   }
   exports.BeatPlayer = BeatPlayer
