@@ -8,7 +8,9 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
     files: [
       'https://unpkg.com/tone',
+      'https://code.jquery.com/jquery-3.4.1.js',
       '../public/javaScript/BeatPlayer.js',
+      '../public/javaScript/Chat.js',
       '../spec/*Spec.js'
     ],
     exclude: [
