@@ -137,6 +137,10 @@ table{
   margin-left: 4px;
 }
 
+.key {
+  font-size: 12px;
+}
+
 .white-key {
   width: 40px;
   height: 120px;
@@ -144,9 +148,12 @@ table{
   border: 4px solid black;
   border-radius: 0 0 6px 6px;
   margin-left: -4px;
+  padding-top: 90px;
 }
 
 .black-key {
+  color: white;
+  padding-top: 50px;
   position: absolute;
   width: 24px;
   height: 80px;
@@ -157,30 +164,142 @@ table{
   cursor: pointer;
 }
 
-.Db4-key {
+#Db4 {
   left: 22px;
 }
 
-.Eb4-key {
+#Eb4 {
   left: 58px;
 }
 
-.Gb4-key {
+#Gb4 {
   left: 130px;
 }
 
-.Ab4-key {
+#Ab4 {
   left: 166px;
 }
 
-.Bb4-key {
+#Bb4 {
   left: 202px;
 }
 
-.Db5-key {
+#Db5 {
   left: 274px;
 }
 
-.Eb5-key {
+#Eb5 {
   left: 310px;
+}
+
+#Gb5 {
+  left: 382px;
+}
+
+#Ab5 {
+  left: 418px;
+}
+
+#Bb5 {
+  left: 454px;
+}
+
+#C4.active-key {
+  background-color: #FF0202;
+}
+
+#Db4.active-key {
+  background-image: linear-gradient(black, #FF6D02);
+}
+
+#D4.active-key {
+  background-color: #FF9B02;
+}
+
+#Eb4.active-key {
+  background-image: linear-gradient(black, #FFCD02);
+}
+
+#E4.active-key {
+  background-color: #FFFF02;
+}
+
+#F4.active-key {
+  background-color: #C9FF02;
+}
+
+#Gb4.active-key {
+  background-image: linear-gradient(black, #9BFF02);
+}
+
+#G4.active-key {
+  background-color: #66FF02;
+}
+
+#Ab4.active-key {
+  background-image: linear-gradient(black, #30FF02);
+}
+
+#A4.active-key {
+  background-color: #02FF02;
+}
+
+#Bb4.active-key {
+  background-image: linear-gradient(black, #02FF34);
+}
+
+#B4.active-key {
+  background-color: #02FF6A;
+}
+
+#C5.active-key {
+  background-color: #02FF9B;
+}
+
+#Db5.active-key {
+  background-image: linear-gradient(black, #02FFCD);
+}
+
+#D5.active-key {
+  background-color: #02FFFF;
+}
+
+#Eb5.active-key {
+  background-image: linear-gradient(black, #02CDFF);
+}
+
+#E5.active-key {
+  background-color: #029BFF;
+}
+
+#F5.active-key {
+  background-color: #0266FF;
+}
+
+#Gb5.active-key {
+  background-image: linear-gradient(black, #0234FF);
+}
+
+#G5.active-key {
+  background-color: #0202FF;
+}
+
+#Ab5.active-key {
+  background-image: linear-gradient(black, #3402FF);
+}
+
+#A5.active-key {
+  background-color: #6602FF;
+}
+
+#Bb5.active-key {
+  background-image: linear-gradient(black, #3402FF);
+}
+
+#B5.active-key {
+  background-color: #9B02FF;
+}
+
+#C6.active-key {
+  background-color: #D502FF;
 }

@@ -14,10 +14,18 @@
     7: 'Bb4',
     u: 'B4',
     i: 'C5',
-    9: 'Db5',
-    o: 'D5',
-    0: 'Eb5',
-    p: 'E5'
+    f: 'Db5',
+    v: 'D5',
+    g: 'Eb5',
+    b: 'E5',
+    n: 'F5',
+    j: 'Gb5',
+    m: 'G5',
+    k: 'Ab5',
+    '\,': 'A5',
+    l: 'Bb5',
+    '\.': 'B5',
+    '\/': 'C6'
   };
 
 const synth = new Tone.Synth().toMaster()
@@ -35,6 +43,7 @@ const handleKeyDown = (event) => {
     fired = true;
     note = synth.triggerAttack(notePairs[key])
     currentNotes[key] = note
+    keyColourOn(key)
   }
 };
 
@@ -44,8 +53,19 @@ const handleKeyUp = event => {
     currentNotes[key].triggerRelease()
     fired = false;
     delete currentNotes[key]
+    keyColourOff(key);
   }
 
+}
+
+function keyColourOn(key){
+  currentKey = document.querySelector(`#${notePairs[key]}`)
+  currentKey.classList.add('active-key')
+};
+
+function keyColourOff(key){
+  currentKey = document.querySelector(`#${notePairs[key]}`)
+  currentKey.classList.remove('active-key')
 }
 
 })();
