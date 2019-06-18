@@ -1,0 +1,156 @@
+*{
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --open:'Open Sans', sans-serif;
+  --Robo:'Roboto', sans-serif;
+}
+
+body{
+  background-color: red;
+  padding: 20px;
+}
+
+/*Gird layout*/
+
+.grid{
+  display: grid;
+  height: 95vh;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.box-1{
+  grid-row-start: 1;
+  grid-row-end: 10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.box-1 #title{
+  font-size: 25px;
+  padding-top: 20px;
+  flex-grow: 1;
+  background-color: blue;
+  align-self: center;
+  font-family: 'Permanent Marker', cursive;
+}
+.box-1 .instructions{
+  flex-grow: 3;
+  background-color: aqua;
+}
+
+.box-1 .instructions h1{
+  text-align: center;
+  padding-top: 20px;
+  background-color: beige;
+}
+.box-2-dashboard{
+  background-color: green;
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+
+.box-3-chat{
+  background-color: blue;
+  grid-row-start: 1;
+  grid-row-end: 10;
+}
+
+.box-4-keyboard{
+  background-color: bisque;
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+
+/*Keyboard*/
+
+.keyboard-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .keyboard {
+    display: flex;
+    position: relative;
+    margin-left: 4px;
+  }
+  
+  .white-key {
+    width: 40px;
+    height: 120px;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 0 0 6px 6px;
+    margin-left: -4px;
+  }
+  
+  .black-key {
+    position: absolute;
+    width: 24px;
+    height: 80px;
+    background-image: linear-gradient(black, gray);
+    border: 3px solid black;
+    border-radius: 0 0 2px 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .Db4-key {
+    left: 22px;
+  }
+  
+  .Eb4-key {
+    left: 58px;
+  }
+  
+  .Gb4-key {
+    left: 130px;
+  }
+  
+  .Ab4-key {
+    left: 166px;
+  }
+  
+  .Bb4-key {
+    left: 202px;
+  }
+  
+  .Db5-key {
+    left: 274px;
+  }
+  
+  .Eb5-key {
+    left: 310px;
+  }
+  
+  /*Dashboad*/
+.table-div {
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+  height: 90%;
+}
+
+.table-div table{
+  padding: 1px;
+  align-self: center;
+}
+
+.button {
+    height: 30px;
+    width: 30px;
+    background-color: #B4B4B4;
+    font-family: var(--Robo);
+    font-size: 8px;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+  }
+
+  /*Images*/
+  .kick{
+    width: 16px;
+  }
