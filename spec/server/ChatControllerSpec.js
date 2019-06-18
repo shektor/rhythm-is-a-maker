@@ -42,6 +42,13 @@ describe('ChatController', () => {
     })
   })
 
+  describe('#clientsConnected', () => {
+    it('returns number of connected clients', () => {
+      chatController.add(chatClient);
+      expect(chatController.clientsConnected()).toEqual(1);
+    })
+  })
+
   describe('#newUserName', () => {
     it('returns unique username for a connecting client', () => {
       spyOn(chatController, 'randomArtist').and.returnValue('bob.geldof')

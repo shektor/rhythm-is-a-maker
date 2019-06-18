@@ -33,6 +33,10 @@ class ChatController {
     return this.clients;
   }
 
+  clientsConnected() {
+    return this.clients.length;
+  }
+
   newUserName() {
     return `${this.randomArtist()}.${this.newID()}`
   }
