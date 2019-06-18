@@ -6,10 +6,11 @@
 :root{
   --open:'Open Sans', sans-serif;
   --Robo:'Roboto', sans-serif;
+  --bradius: 5px;
+  --mons: 'Montserrat', sans-serif;
 }
 
 body{
-  background-color: red;
   padding: 20px;
 }
 
@@ -28,29 +29,37 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: #FAFAFA;
+  border-top-left-radius: var(--bradius);
+  border-top-right-radius: var(--bradius);
 }
 .box-1 #title{
   font-size: 25px;
   padding-top: 20px;
   flex-grow: 1;
-  background-color: blue;
   align-self: center;
   font-family: 'Permanent Marker', cursive;
 }
 .box-1 .instructions{
-  flex-grow: 3;
-  background-color: aqua;
+  flex-grow: 5;
+  background-color: #121A2F;
 }
 
 .box-1 .instructions h1{
   text-align: center;
   padding-top: 20px;
-  background-color: beige;
+  padding-bottom: 5px;
+  font-family: var(--mons);
+  color: #fff;
 }
 .box-2-dashboard{
-  background-color: green;
+  background-color: #FAFAFA;
   grid-row-start: 1;
   grid-row-end: 8;
+  border-top-left-radius: var(--bradius);
+  border-top-right-radius: var(--bradius);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .box-3-chat{
@@ -60,9 +69,11 @@ body{
 }
 
 .box-4-keyboard{
-  background-color: bisque;
+  background-color: #1C1C1C;
   grid-row-start: 8;
   grid-row-end: 10;
+  padding-top: 10px;
+  border-radius: var(--bradius);
 }
 
 /*Keyboard*/
@@ -129,9 +140,9 @@ body{
   /*Dashboad*/
 .table-div {
   display: flex;
-  background-color: aqua;
+  background-color:#1D1D1D;
   justify-content: center;
-  height: 90%;
+  height: 85%;
 }
 
 .table-div table{
@@ -140,17 +151,45 @@ body{
 }
 
 .button {
-    height: 30px;
-    width: 30px;
-    background-color: #B4B4B4;
-    font-family: var(--Robo);
-    font-size: 8px;
-    color: #ffff;
-    border: none;
-    border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: #B4B4B4;
+  font-family: var(--Robo);
+  font-size: 8px;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
   }
 
   /*Images*/
   .kick{
     width: 16px;
   }
+
+  /*bpm*/
+span .minus{
+  color: #303030;
+  padding: 10px;
+  font-size: 10px;
+}
+
+span .plus{
+  color: #303030;
+  padding: 10px;
+  font-size: 10px;
+}
+
+/*On and Off*/
+.on-container .powerOn, .stop{
+  color: #303030;
+  opacity: 1;
+}
+
+.on-container .powerOn:hover{
+  color: red;
+  opacity: 0.5;
+}
+.on-container .stop:hover{
+  color: #BFA68F;
+  opacity: 0.5;
+}
