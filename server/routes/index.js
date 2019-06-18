@@ -3,4 +3,5 @@ const express = require('express'),
       index = require('../controllers/index');
 
 router.get('/', index.index);
+router.get('/layout', index.layout);
 module.exports = router;
