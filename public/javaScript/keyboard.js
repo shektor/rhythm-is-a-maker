@@ -35,6 +35,7 @@ const handleKeyDown = (event) => {
     fired = true;
     note = synth.triggerAttack(notePairs[key])
     currentNotes[key] = note
+    keyColourOn(key)
   }
 };
 
@@ -44,8 +45,19 @@ const handleKeyUp = event => {
     currentNotes[key].triggerRelease()
     fired = false;
     delete currentNotes[key]
+    keyColourOff(key);
   }
 
+}
+
+function keyColourOn(key){
+  currentKey = document.querySelector(`#${notePairs[key]}`)
+  currentKey.classList.add('active-key')
+};
+
+function keyColourOff(key){
+  currentKey = document.querySelector(`#${notePairs[key]}`)
+  currentKey.classList.remove('active-key')
 }
 
 })();

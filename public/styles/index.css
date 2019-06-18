@@ -187,3 +187,7 @@ table{
 .Eb5-key {
   left: 310px;
 }
+
+#C4.active-key {
+  background-color: red;
+}
