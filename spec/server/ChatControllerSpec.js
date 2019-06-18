@@ -14,10 +14,48 @@ describe('ChatController', () => {
     })
   })
 
+  describe('#remove', () => {
+    it('removes a client from clients array', () => {
+      let chatClient1 = {
+        userName: 'a1'
+      }
+
+      let chatClient2 = {
+        userName: 'b2'
+      }
+
+      let chatClient3 = {
+        userName: 'c3'
+      }
+
+      chatController.add(chatClient1);
+      chatController.add(chatClient2);
+      chatController.add(chatClient3);
+      expect(chatController.remove(chatClient2)).toEqual([chatClient2]);
+    })
+  })
+
   describe('#allClients', () => {
     it('returns all connected clients', () => {
       chatController.add(chatClient);
       expect(chatController.allClients()).toEqual([chatClient]);
+    })
+  })
+
+  describe('#newUserName', () => {
+    it('returns unique username for a connecting client', () => {
+      spyOn(chatController, 'randomArtist').and.returnValue('bob.geldof')
+      expect(chatController.newUserName()).toBe('bob.geldof1000');
+    })
+  })
+
+  describe('#randomArtist', () => {
+    it('returns random artist name', () => {
+      spyOn(Math, 'floor').and.callFake((value) => {
+        return value * 0;
+      })
+      spyOn(Math, 'random').and.returnValue(0)
+      expect(chatController.randomArtist()).toBe('bob.geldof');
     })
   })
 
