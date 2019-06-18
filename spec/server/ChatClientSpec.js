@@ -24,7 +24,7 @@ describe('ChatClient', () => {
 
   describe('#username', () => {
     it('returns the username', () => {
-      expect(chatClient.getUsername()).toBe(username)
+      expect(chatClient.getUserName()).toBe(username)
     })
   })
 })

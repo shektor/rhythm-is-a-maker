@@ -8,8 +8,12 @@ class ChatClient {
     return this.webSocket.send(data);
   }
 
-  getUsername() {
+  getUserName() {
     return this.username;
+  }
+
+  sendUserName() {
+    return this.send(JSON.stringify({ type: 'username', data: this.username }))
   }
 }
 
