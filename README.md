@@ -10,9 +10,9 @@
  Team.
 </h1>
 
-|  **Team Collaborators** | Scott Hall|   Frankie Bamgboye| Michael Darmody | Steven Hektor| Sarpong Abasimi |
-| :---:                  | :-----: | :-------:     | :------:      |:-------: | :-----:|
-|**Github Profile**       |<a href='https://github.com/HottScall'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a> |<a href='https://github.com/FrankieBoye'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/Michael-Darmody'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/shektor'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/SarpongAbasimi'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|
+|  **Team Collaborators** | Scott Hall|   Frankie Bamgboye| Michael Darmody | Steven Hektor| Sarpong Abasimi | Jake Napper |
+| :---:                  | :-----: | :-------:     | :------:      |:-------: | :-----:|:-----:|
+|**Github Profile**       |<a href='https://github.com/HottScall'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a> |<a href='https://github.com/FrankieBoye'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/Michael-Darmody'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/shektor'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/SarpongAbasimi'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|<a href='https://github.com/NapperJLG'><img src='https://user-images.githubusercontent.com/37377831/56474819-35529080-6477-11e9-9e63-4cdf0055c340.png' width='40'></a>|
 
 <h4 align='center'>
 How To Use Application.
@@ -55,7 +55,7 @@ synth.triggerAttackRelease('C4', '8n')
 
 
 - ``14th June 2019``
-> This is how the application currently look like.
+> This is how the application is currently looking.
 
 <img width="1274" alt="Screen Shot 2019-06-15 at 21 46 08" src="https://user-images.githubusercontent.com/37377831/59556281-b598fc00-8fb7-11e9-904f-a5134a5bd53c.png">
 
