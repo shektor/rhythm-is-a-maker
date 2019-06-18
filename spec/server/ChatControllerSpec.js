@@ -45,7 +45,7 @@ describe('ChatController', () => {
   describe('#newUserName', () => {
     it('returns unique username for a connecting client', () => {
       spyOn(chatController, 'randomArtist').and.returnValue('bob.geldof')
-      expect(chatController.newUserName()).toBe('bob.geldof1000');
+      expect(chatController.newUserName()).toBe('bob.geldof.1000');
     })
   })
 

@@ -2,7 +2,20 @@ class ChatController {
   constructor() {
     this.clients = [];
     this.newClientID = 999;
-    this.artistNames = ['bob.geldof', 'lil.yachty']
+    this.artistNames = [
+      'bob.geldof',
+      'herbie.hancock',
+      'janet.jackson',
+      'james.brown',
+      'luther.vandross',
+      'chaka.khan',
+      'the.wombats',
+      'taylor.swift',
+      'childish.gambino',
+      'ja.rule',
+      'mick.jagger',
+      'whitney.houston'
+    ]
   }
 
   add(client) {
@@ -21,7 +34,7 @@ class ChatController {
   }
 
   newUserName() {
-    return `${this.randomArtist()}${this.newID()}`
+    return `${this.randomArtist()}.${this.newID()}`
   }
 
   randomArtist() {
