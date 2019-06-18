@@ -2,7 +2,7 @@
   Rhythm Is A Maker.
 </h1>
 <p align="center">
-<img src="https://img.shields.io/travis/shektor/rhythm-is-a-maker.svg">
+<img src="https://img.shields.io/travis/shektor/rhythm-is-a-maker/master.svg">
 <img src="https://img.shields.io/coveralls/github/shektor/rhythm-is-a-maker.svg">
 </p>
 
