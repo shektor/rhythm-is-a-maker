@@ -66,6 +66,10 @@ body{
   background-color: blue;
   grid-row-start: 1;
   grid-row-end: 10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: var(--bradius);
 }
 
 .box-4-keyboard{
@@ -179,6 +183,12 @@ span .plus{
   font-size: 10px;
 }
 
+#v{
+  color: red;
+  padding: 10px;
+  font-size: 10px;
+}
+
 /*On and Off*/
 .on-container .powerOn, .stop{
   color: #303030;
@@ -192,4 +202,11 @@ span .plus{
 .on-container .stop:hover{
   color: #BFA68F;
   opacity: 0.5;
+}
+
+/*Chat*/
+.box-3-chat #chat-title{
+  background-color: #B4B4B4;
+  font-family: var(--mons);
+  text-align: center;
 }
