@@ -160,34 +160,51 @@ table{
   cursor: pointer;
 }
 
-.Db4-key {
+#Db4 {
   left: 22px;
 }
 
-.Eb4-key {
+#Eb4 {
   left: 58px;
 }
 
-.Gb4-key {
+#Gb4 {
   left: 130px;
 }
 
-.Ab4-key {
+#Ab4 {
   left: 166px;
 }
 
-.Bb4-key {
+#Bb4 {
   left: 202px;
 }
 
-.Db5-key {
+#Db5 {
   left: 274px;
 }
 
-.Eb5-key {
+#Eb5 {
   left: 310px;
 }
 
+#Gb5 {
+  left: 382px;
+}
+
+#Ab5 {
+  left: 418px;
+}
+
+#Bb5 {
+  left: 454px;
+}
+
 #C4.active-key {
-  background-color: red;
+  background-color: #FF0202;
+}
+
+#Db4.active-key {
+  background-image: linear-gradient(black, #FF7502);
+  background-color: #FF7502;
 }
