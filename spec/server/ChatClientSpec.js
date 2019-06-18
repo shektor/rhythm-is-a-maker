@@ -27,4 +27,14 @@ describe('ChatClient', () => {
       expect(chatClient.getUserName()).toBe(username)
     })
   })
+
+  describe('#sendUserName', () => {
+    it('sends a client their username', () => {
+      spyOn(chatClient, 'send');
+      chatClient.sendUserName();
+
+      let string = `{"type":"username","data":"${username}"}`
+      expect(chatClient.send).toHaveBeenCalledWith(string)
+    })
+  })
 })
