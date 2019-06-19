@@ -30,8 +30,11 @@
 
 // const synth = new Tone.Synth().toMaster()
 let autoWah = new Tone.AutoWah().toMaster();
+let pingPong = new Tone.PingPongDelay(0.0, 0.2).toMaster();
 const xSynth = new Tone.PolySynth(4, Tone.synth).toMaster()
-let synth = xSynth.connect(autoWah)
+let wahSynth = xSynth.connect(autoWah)
+let synth = wahSynth.connect(pingPong)
+
 
 const currentNotes = {};
 
@@ -79,6 +82,10 @@ synth.set("volume", newVolume)
 
 document.getElementById('aWah').addEventListener('input', e => {
 autoWah.Q.value = +e.target.value
+})
+
+document.getElementById('keyDelay').addEventListener('input', e => {
+pingPong.delayTime.value = +e.target.value
 })
 
 
