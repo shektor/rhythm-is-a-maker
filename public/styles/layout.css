@@ -25,12 +25,13 @@ body {
 }
 
 .box-1 {
+  color: white;
   grid-row-start: 1;
   grid-row-end: 10;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
   border-top-left-radius: var(--bradius);
   border-top-right-radius: var(--bradius);
 }
@@ -45,39 +46,44 @@ body {
 
 .box-1 .instructions {
   flex-grow: 5;
-  background-color: #121A2F;
+  /* background-color: #121A2F; */
+  color: white;
+  font-family: 'Kalam', cursive;
 }
 
 .box-1 .instructions h1 {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 5px;
-  font-family: var(--mons);
+  /* font-family: var(--mons); */
   color: #fff;
 }
 
 .box-2-dashboard {
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
+  color: white;
   grid-row-start: 1;
   grid-row-end: 8;
   border-top-left-radius: var(--bradius);
   border-top-right-radius: var(--bradius);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+  font-family: 'Kalam', cursive;
 }
 
 .box-3-chat {
-  background-color: blue;
+  color: white;
   grid-row-start: 1;
   grid-row-end: 10;
   display: flex;
   justify-content: center;
   flex-direction: column;
   border-radius: var(--bradius);
+  font-family: 'Kalam', cursive;
 }
 
 .box-4-keyboard {
-  background-color: #1C1C1C;
+  /* background-color: #1C1C1C; */
   grid-row-start: 8;
   grid-row-end: 10;
   padding-top: 10px;
@@ -148,7 +154,7 @@ body {
 /*Dashboad*/
 .table-div {
   display: flex;
-  background-color: #1D1D1D;
+  /* background-color: #1D1D1D; */
   justify-content: center;
   height: 85%;
 }
@@ -165,27 +171,25 @@ body {
 
 /*bpm*/
 span .minus {
-  color: #303030;
+  /* color: #303030; */
   padding: 10px;
   font-size: 10px;
 }
 
 span .plus {
-  color: #303030;
+  /* color: #303030; */
   padding: 10px;
   font-size: 10px;
 }
 
 #v {
   color: red;
-  padding: 10px;
-  font-size: 10px;
 }
 
 /*On and Off*/
 .on-container .powerOn,
 .stop {
-  color: #303030;
+  color: white;
   opacity: 1;
 }
 
@@ -201,22 +205,14 @@ span .plus {
 
 /*Chat*/
 .box-3-chat #chat-title {
-  background-color: #B4B4B4;
-  font-family: var(--mons);
-  color: white;
   text-align: center;
 }
 
 .box-3-chat .chat-mgs {
-  background-color: red;
-  font-family: var(--mons);
-  color: white;
-  /* text-align: center; */
   flex-grow: 3;
 }
 
 .box-3-chat .chat-mgs #content {
-  background-color: green;
   overflow: scroll;
   height: 550px;
 }
