@@ -30,6 +30,7 @@
 
 // const synth = new Tone.Synth().toMaster()
 const synth = new Tone.PolySynth(4, Tone.synth).toMaster()
+// synth.set("volume", 20)
 
 const currentNotes = {};
 
@@ -69,5 +70,18 @@ function keyColourOff(key){
   currentKey = document.querySelector(`#${notePairs[key]}`)
   currentKey.classList.remove('active-key')
 }
+
+document.getElementById('volume').addEventListener('input', e => {
+let newVolume = +e.target.value
+synth.set("volume", newVolume)
+console.log('input')
+})
+
+// // Tone.Transport.bpm.value =
+// })
+//
+// document.getElementById('volume').onchange=function(){
+//   document.getElementById('v').innerHTML = this.value;
+// };
 
 })();
