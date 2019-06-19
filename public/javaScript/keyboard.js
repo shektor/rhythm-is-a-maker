@@ -28,7 +28,8 @@
     '\/': 'C6'
   };
 
-const synth = new Tone.Synth().toMaster()
+// const synth = new Tone.Synth().toMaster()
+const synth = new Tone.PolySynth(4, Tone.synth).toMaster()
 
 const currentNotes = {};
 
@@ -39,18 +40,19 @@ let fired = false;
 
 const handleKeyDown = (event) => {
   const key = event.key
-  if (notePairs[key] && !fired) {
+  if (notePairs[key] && !currentNotes[key]) {
     fired = true;
     note = synth.triggerAttack(notePairs[key])
     currentNotes[key] = note
     keyColourOn(key)
+    console.log(currentNotes);
   }
 };
 
 const handleKeyUp = event => {
   const key = event.key
   if (currentNotes[key]) {
-    currentNotes[key].triggerRelease()
+    currentNotes[key].triggerRelease(notePairs[key])
     fired = false;
     delete currentNotes[key]
     keyColourOff(key);
