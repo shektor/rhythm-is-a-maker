@@ -155,8 +155,8 @@ body{
 }
 
 .button {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   background-color: #B4B4B4;
   font-family: var(--Robo);
   font-size: 8px;
@@ -208,5 +208,14 @@ span .plus{
 .box-3-chat #chat-title{
   background-color: #B4B4B4;
   font-family: var(--mons);
+  color: white;
   text-align: center;
+}
+
+.box-3-chat .chat-mgs{
+  background-color:red;
+  font-family: var(--mons);
+  color: white;
+  /* text-align: center; */
+  flex-grow: 3;
 }
