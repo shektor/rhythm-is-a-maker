@@ -1,18 +1,27 @@
 class ChatMessage {
-  constructor(message) {
-    this.message = message
+  constructor(data) {
+    this.username = null;
+    this.message = null;
+    this.type = null;
+    this.json = null;
+
+    this.jsonParse(data);
   }
 
-  jsonParse() {
-    return JSON.parse(this.message)
+  jsonParse(data) {
+    this.json = JSON.parse(data)
+    this.type = this.json.type
+    this.username = this.json.username
+    this.message = this.json.data
+    return this.json
   }
 
-  jsonCreate() {
-    return { type: 'message', data: this.jsonParse().data }
+  data() {
+    return this.jsonStringify({ type: 'message', username: this.username, data: this.message })
   }
 
-  jsonStringify() {
-    return JSON.stringify(this.jsonCreate())
+  jsonStringify(data) {
+    return JSON.stringify(data)
   }
 }
 
