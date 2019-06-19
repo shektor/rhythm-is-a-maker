@@ -219,3 +219,9 @@ span .plus{
   /* text-align: center; */
   flex-grow: 3;
 }
+
+.box-3-chat .chat-mgs #content{
+  background-color:green;
+  overflow: scroll;
+  height: 550px;
+}
