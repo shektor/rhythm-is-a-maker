@@ -32,9 +32,10 @@ let autoWah = new Tone.AutoWah().toMaster();
 let pingPong = new Tone.PingPongDelay(0.0, 0.2).toMaster();
 let reverb = new Tone.Freeverb(0).toMaster();
 const xSynth = new Tone.PolySynth(4, Tone.synth).toMaster()
-let wahSynth = xSynth.connect(autoWah)
-let pongSynth = wahSynth.connect(pingPong)
-let synth = pongSynth.connect(reverb)
+// let wahSynth = xSynth.connect(autoWah)
+// let pongSynth = wahSynth.connect(pingPong)
+// let reverbSynth = pongSynth.connect(reverb)
+let synth = xSynth.chain(autoWah, pingPong, reverb)
 
 
 const currentNotes = {};
@@ -91,7 +92,6 @@ pingPong.delayTime.value = +e.target.value
 
 document.getElementById('reverb').addEventListener('input', e =>{
 reverb.roomSize.value = +e.target.value
-  
 })
 
 
