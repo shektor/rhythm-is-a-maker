@@ -305,14 +305,6 @@ table{
   background-color: #D502FF;
 }
 
-.volume{
-  background-color: white;
-}
-
-.autoWah{
-    background-color: white;
-}
-
-.delay{
+.effectSlider{
   background-color: white;
 }
