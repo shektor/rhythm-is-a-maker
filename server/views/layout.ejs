@@ -1,137 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <div class='grid'>
+  <div class='grid'>
 
-      <div class="box-1">
-        <h1 id='title'>Rhythm Is A Maker</h1>
-        <div class="instructions">
-         <h1>Instructions</h1>
-        </div>
+    <div class="box-1">
+      <h1 id='title'>Rhythm Is A Maker</h1>
+      <div class="instructions">
+        <h1>Instructions</h1>
+        Click on the buttons to compose your beat.
+        Press the play button to start the loop.
+        Press the stop button to end the loop.
       </div>
+    </div>
 
-      <div class="box-2-dashboard">
-          <div class="on-container">
-            <i class="fas fa-play powerOn"></i>
-            <i class="fas fa-stop-circle stop"></i>
-            <span><i class="fas fa-minus minus"></i></span><input id="bpm" type="range" min="80" max="200" value="120" step="2"><span><i class="fas fa-plus plus"></i></span>
-            <span class='bpm-value' id='v'></span>
-          </div>
-        <div class="table-div">
-          <table>
-            <tr>
-            <th><button id='button-11'onclick="toggleButton(this)" class='button row-1' type="button"><img class ='kick'src='/drumsvg/drum.svg' alt='drumkick'></button></th>
+    <div class="box-2-dashboard">
+      <div class="on-container">
+        <i class="fas fa-play powerOn"></i>
+        <i class="fas fa-stop-circle stop"></i>
+        <span>BPM <span class='bpm-value' id='v'></span><i class="fas fa-minus minus"></i></span><input id="bpm" type="range" min="80" max="200" value="120"
+          step="2"><span><i class="fas fa-plus plus"></i></span>
+        <span class='bpm-value' id='v'></span>
+      </div>
+      <div class="table-div">
+        <table>
+          <tr>
+            <th><button id='button-11' onclick="toggleButton(this)" class='button row-1' type="button"><img class='kick'
+                  src='/drumsvg/drum.svg' alt='drumkick'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-1<%= i + 2 %>'onclick="toggleButton(this)" class='button row-1' type="button"></button></th>
+            <th><button id='button-1<%= i + 2 %>' onclick="toggleButton(this)" class='button row-1'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-21'onclick="toggleButton(this)" class='button row-2' type="button"><img class ='kick'src='/drumsvg/snare.svg' alt='snare'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-21' onclick="toggleButton(this)" class='button row-2' type="button"><img class='kick'
+                  src='/drumsvg/snare.svg' alt='snare'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-2<%= i + 2 %>'onclick="toggleButton(this)" class='button row-2' type="button"></button></th>
+            <th><button id='button-2<%= i + 2 %>' onclick="toggleButton(this)" class='button row-2'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-31'onclick="toggleButton(this)" class='button row-3' type="button"><img class ='kick'src='/drumsvg/hi-hat.svg' alt='hi-hat'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-31' onclick="toggleButton(this)" class='button row-3' type="button"><img class='kick'
+                  src='/drumsvg/hi-hat.svg' alt='hi-hat'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-3<%= i + 2 %>'onclick="toggleButton(this)" class='button row-3' type="button"></button></th>
+            <th><button id='button-3<%= i + 2 %>' onclick="toggleButton(this)" class='button row-3'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-41'onclick="toggleButton(this)" class='button row-4' type="button"><img class ='kick'src='/drumsvg/open-hi-hat.svg' alt='open-hi-hat'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-41' onclick="toggleButton(this)" class='button row-4' type="button"><img class='kick'
+                  src='/drumsvg/open-hi-hat.svg' alt='open-hi-hat'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-4<%= i + 2 %>'onclick="toggleButton(this)" class='button row-4' type="button"></button></th>
+            <th><button id='button-4<%= i + 2 %>' onclick="toggleButton(this)" class='button row-4'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-51'onclick="toggleButton(this)" class='button row-5' type="button"><img class ='kick'src='/drumsvg/clap.svg' alt='clap'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-51' onclick="toggleButton(this)" class='button row-5' type="button"><img class='kick'
+                  src='/drumsvg/clap.svg' alt='clap'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-5<%= i + 2 %>'onclick="toggleButton(this)" class='button row-5' type="button"></button></th>
+            <th><button id='button-5<%= i + 2 %>' onclick="toggleButton(this)" class='button row-5'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-61'onclick="toggleButton(this)" class='button row-6' type="button">   <img class ='kick'src='/drumsvg/cowbell.svg' alt='cowbell'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-61' onclick="toggleButton(this)" class='button row-6' type="button"> <img
+                  class='kick' src='/drumsvg/cowbell.svg' alt='cowbell'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-6<%= i + 2 %>'onclick="toggleButton(this)" class='button row-6' type="button"></button></th>
+            <th><button id='button-6<%= i + 2 %>' onclick="toggleButton(this)" class='button row-6'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-71'onclick="toggleButton(this)" class='button row-7' type="button"><img class ='kick'src='/drumsvg/soul.svg' alt='soul'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-71' onclick="toggleButton(this)" class='button row-7' type="button"><img class='kick'
+                  src='/drumsvg/soul.svg' alt='soul'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-7<%= i + 2 %>'onclick="toggleButton(this)" class='button row-7' type="button"></button></th>
+            <th><button id='button-7<%= i + 2 %>' onclick="toggleButton(this)" class='button row-7'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr>
-            <th><button id='button-81'onclick="toggleButton(this)" class='button row-8' type="button"><img class ='kick'src='/drumsvg/funk.svg' alt='funk'></button></th>
+          </tr>
+          <tr>
+            <th><button id='button-81' onclick="toggleButton(this)" class='button row-8' type="button"><img class='kick'
+                  src='/drumsvg/funk.svg' alt='funk'></button></th>
             <% for (let i = 0; i < 15; i++) { %>
-            <th><button id='button-8<%= i + 2 %>'onclick="toggleButton(this)" class='button row-8' type="button"></button></th>
+            <th><button id='button-8<%= i + 2 %>' onclick="toggleButton(this)" class='button row-8'
+                type="button">.</button></th>
             <% } %>
-            </tr>
-            <tr id='conter-container'>
+          </tr>
+          <tr id='conter-container'>
             <% for (let i = 0; i < 16; i++) { %>
             <th>
-                <div class='counter' id='c-<%= i %>'></div>
+              <div class='counter' id='c-<%= i %>'></div>
             </th>
             <% } %>
-            </tr>
-          </table>
-        </div>
-
-      </div>
-
-      <div class="box-3-chat">
-          <h1 id='chat-title'>Chat</h1>
-        <div class="chat-mgs">
-
-        </div>
-      </div>
-
-      <div class="box-4-keyboard">
-
-         <div class="keyboard-container">
-              <div class="keyboard">
-                <button type="button" class="key white-key C4-key"></button>
-                <button type="button" class="key black-key Db4-key"></button>
-                <button type="button" class="key white-key D4-key"></button>
-                <button type="button" class="key black-key Eb4-key"></button>
-                <button type="button" class="key white-key E4-key"></button>
-                <button type="button" class="key white-key F4-key"></button>
-                <button type="button" class="key black-key Gb4-key"></button>
-                <button type="button" class="key white-key G4-key"></button>
-                <button type="button" class="key black-key Ab4-key"></button>
-                <button type="button" class="key white-key A4-key"></button>
-                <button type="button" class="key black-key Bb4-key"></button>
-                <button type="button" class="key white-key B4-key"></button>
-                <button type="button" class="key white-key C5-key"></button>
-                <button type="button" class="key black-key Db5-key"></button>
-                <button type="button" class="key white-key D5-key"></button>
-                <button type="button" class="key black-key Eb5-key"></button>
-                <button type="button" class="key white-key E5-key"></button>
-             </div>
-          </div>
+          </tr>
+        </table>
       </div>
 
     </div>
 
-    <script src="/javaScript/BeatPlayer.js"></script>
-    <script src="https://unpkg.com/tone"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="/javaScript/Chat.js"></script>
-    <script src="/javaScript/MessageHandler.js"></script>
-    <script src="/javaScript/tone.js"></script>
-    <script src="/javaScript/sequence.js"></script>
-    <script src='/javaScript/keyboard.js'></script>
+    <div class="box-3-chat">
+      <div id='chat-title'></div>
+      <div class="chat-mgs">
+        <h1>Chat</h1>
+        <p><span id="clients">0</span> artists in chat</p>
+        <span id="status">Connecting...</span>
+        <input type="text" id="input" placeholder="Chat with everyone!" disabled="disabled">
+        <div id="content"></div>
+      </div>
+    </div>
+
+    <div class="box-4-keyboard">
+
+      <div class="keyboard-container">
+        <div class="keyboard">
+          <button type="button" class="key white-key C4-key" id='C4'>q</button>
+          <button type="button" class="key black-key Db4-key" id='Db4'>2</button>
+          <button type="button" class="key white-key D4-key" id='D4'>w</button>
+          <button type="button" class="key black-key Eb4-key" id='Eb4'>3</button>
+          <button type="button" class="key white-key E4-key" id='E4'>e</button>
+          <button type="button" class="key white-key F4-key" id='F4'>r</button>
+          <button type="button" class="key black-key Gb4-key" id='Gb4'>5</button>
+          <button type="button" class="key white-key G4-key" id='G4'>t</button>
+          <button type="button" class="key black-key Ab4-key" id='Ab4'>6</button>
+          <button type="button" class="key white-key A4-key" id='A4'>y</button>
+          <button type="button" class="key black-key Bb4-key" id='Bb4'>7</button>
+          <button type="button" class="key white-key B4-key" id='B4'>u</button>
+          <button type="button" class="key white-key C5-key" id='C5'>i</button>
+          <button type="button" class="key black-key Db5-key" id='Db5'>f</button>
+          <button type="button" class="key white-key D5-key" id='D5'>v</button>
+          <button type="button" class="key black-key Eb5-key" id='Eb5'>g</button>
+          <button type="button" class="key white-key E5-key" id='E5'>b</button>
+          <button type="button" class="key white-key F5-key" id='F5'>n</button>
+          <button type="button" class="key black-key Gb5-key" id='Gb5'>j</button>
+          <button type="button" class="key white-key G5-key" id='G5'>m</button>
+          <button type="button" class="key black-key Ab5-key" id='Ab5'>k</button>
+          <button type="button" class="key white-key A5-key" id='A5'>,</button>
+          <button type="button" class="key black-key Bb5-key" id='Bb5'>l</button>
+          <button type="button" class="key white-key B5-key" id='B5'>.</button>
+          <button type="button" class="key white-key C6-key" id='C6'>/</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/javaScript/BeatPlayer.js"></script>
+  <script src="https://unpkg.com/tone"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="/javaScript/Chat.js"></script>
+  <script src="/javaScript/MessageHandler.js"></script>
+  <script src="/javaScript/tone.js"></script>
+  <script src="/javaScript/sequence.js"></script>
+  <script src='/javaScript/keyboard.js'></script>
 </body>
 </html>
