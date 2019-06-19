@@ -28,8 +28,15 @@
     '\/': 'C6'
   };
 
-// const synth = new Tone.Synth().toMaster()
-const synth = new Tone.PolySynth(4, Tone.synth).toMaster()
+let autoWah = new Tone.AutoWah().toMaster();
+let pingPong = new Tone.PingPongDelay(0.0, 0.2).toMaster();
+let reverb = new Tone.Freeverb(0).toMaster();
+const xSynth = new Tone.PolySynth(4, Tone.synth).toMaster()
+// let wahSynth = xSynth.connect(autoWah)
+// let pongSynth = wahSynth.connect(pingPong)
+// let reverbSynth = pongSynth.connect(reverb)
+let synth = xSynth.chain(autoWah, pingPong, reverb)
+
 
 const currentNotes = {};
 
@@ -69,5 +76,23 @@ function keyColourOff(key){
   currentKey = document.querySelector(`#${notePairs[key]}`)
   currentKey.classList.remove('active-key')
 }
+
+document.getElementById('volume').addEventListener('input', e => {
+let newVolume = +e.target.value
+synth.set("volume", newVolume)
+})
+
+document.getElementById('aWah').addEventListener('input', e => {
+autoWah.Q.value = +e.target.value
+})
+
+document.getElementById('keyDelay').addEventListener('input', e => {
+pingPong.delayTime.value = +e.target.value
+})
+
+document.getElementById('reverb').addEventListener('input', e =>{
+reverb.roomSize.value = +e.target.value
+})
+
 
 })();
