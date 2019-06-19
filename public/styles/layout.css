@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* background-color: #FAFAFA; */
+  /* background-color: darkgrey; */
   border-top-left-radius: var(--bradius);
   border-top-right-radius: var(--bradius);
 }
@@ -45,14 +45,15 @@ body {
 }
 
 .box-1 .instructions {
-  flex-grow: 5;
-  /* background-color: #121A2F; */
+  flex-grow: 2000;
+  /* background-color: darkgrey; */
   color: white;
   font-family: 'Kalam', cursive;
+  text-align: center;
 }
 
 .box-1 .instructions h1 {
-  text-align: center;
+  /* text-align: right; */
   padding-top: 20px;
   padding-bottom: 5px;
   /* font-family: var(--mons); */
@@ -60,7 +61,7 @@ body {
 }
 
 .box-2-dashboard {
-  /* background-color: #FAFAFA; */
+  /* background-color: darkgrey; */
   color: white;
   grid-row-start: 1;
   grid-row-end: 8;
@@ -72,6 +73,7 @@ body {
 }
 
 .box-3-chat {
+  /* background-color: darkgrey; */
   color: white;
   grid-row-start: 1;
   grid-row-end: 10;
@@ -206,13 +208,17 @@ span .plus {
 /*Chat*/
 .box-3-chat #chat-title {
   text-align: center;
+  flex-grow: 1;
 }
 
 .box-3-chat .chat-mgs {
-  flex-grow: 3;
+  text-align: left;
+  height: 30px;
+  flex-grow: 7;
 }
 
 .box-3-chat .chat-mgs #content {
+  text-align: left;
   overflow: scroll;
-  height: 550px;
+  height: 300px;
 }
