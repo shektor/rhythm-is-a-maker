@@ -24,8 +24,13 @@
       <div class="instructions">
         <h1>Instructions</h1>
         Click on the buttons to compose your beat.
-        Press the play button to start the loop.
-        Press the stop button to end the loop.
+        <br>Press the play button to start the loop.
+        <br>Press the stop button to end the loop.
+        <br>DISCO MODE
+        <label class="switch">
+            <input type="checkbox" id="discoButton">
+            <span class="slider round"></span>
+          </label>
       </div>
     </div>
 
@@ -127,6 +132,23 @@
     </div>
 
     <div class="box-4-keyboard">
+        <div class="effectSlider">
+            <span>Volume</span>
+            <input class="effectSlider" id="volume" type="range" min="0" max="30" value="1" step="1"><span>
+            <span class='volume-value' id='volume-value'></span>
+            <span>Autowah</span>
+            <input class="effectSlider" id="aWah" type="range" min="0" max="15" value="0" step="1"><span>
+            <span class='volume-value' id='volume-value'></span>
+          </div>
+            <div class="effectSlider">
+            <span>Delay</span>
+            <input class="effectSlider" id="keyDelay" type="range" min="0" max="1" value="0" step="0.01"><span>
+            <span class='delay-value' id='delay-value'></span>
+            <span>Reverb</span>
+            <input id="reverb" type="range" min="0" max="0.9" value="0" step="0.01"><span>
+            <span class='reverb-value' id='reverb-value'></span>
+          </div>
+          <br>
 
       <div class="keyboard-container">
         <div class="keyboard">
