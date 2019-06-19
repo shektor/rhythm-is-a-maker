@@ -65,13 +65,19 @@
       let dot = document.querySelector(`#c-${step}`)
       dot.style.backgroundColor = 'white'
     }
-    if (step % 4 === 0) {
-      let randomColor = Math.floor(Math.random()*16777215).toString(16);
-      $("body").css({backgroundColor: '#' + randomColor});
-      randomColor = Math.floor(Math.random()*16777215).toString(16);
-      $(".box-2-dashboard").css({backgroundColor: '#' + randomColor});
-      randomColor = Math.floor(Math.random()*16777215).toString(16);
-      $(".box-4-keyboard").css({backgroundColor: '#' + randomColor});
+    if (document.getElementById('discoButton').checked === true) {
+      if (step % 2 === 0) {
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        $("body").css({backgroundColor: '#' + randomColor});
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+        $(".box-2-dashboard").css({backgroundColor: '#' + randomColor});
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+        $(".box-4-keyboard").css({backgroundColor: '#' + randomColor});
+      }
+    } else {
+      $("body").css({backgroundColor: '#1F2328'});
+      $(".box-2-dashboard").css({backgroundColor: '#1F2328'});
+      $(".box-4-keyboard").css({backgroundColor: '#1F2328'});
     }
   }
 
