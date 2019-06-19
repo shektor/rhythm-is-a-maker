@@ -315,5 +315,7 @@ table{
 }
 
 .effectSlider{
-  background-color: white;
+  color: white;
+  font-family: 'Kalam', cursive;
+  text-align: center;
 }
