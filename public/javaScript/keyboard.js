@@ -29,8 +29,9 @@
   };
 
 // const synth = new Tone.Synth().toMaster()
-const synth = new Tone.PolySynth(4, Tone.synth).toMaster()
-// synth.set("volume", 20)
+let autoWah = new Tone.AutoWah().toMaster();
+const xSynth = new Tone.PolySynth(4, Tone.synth).toMaster()
+let synth = xSynth.connect(autoWah)
 
 const currentNotes = {};
 
@@ -74,14 +75,11 @@ function keyColourOff(key){
 document.getElementById('volume').addEventListener('input', e => {
 let newVolume = +e.target.value
 synth.set("volume", newVolume)
-console.log('input')
 })
 
-// // Tone.Transport.bpm.value =
-// })
-//
-// document.getElementById('volume').onchange=function(){
-//   document.getElementById('v').innerHTML = this.value;
-// };
+document.getElementById('aWah').addEventListener('input', e => {
+autoWah.Q.value = +e.target.value
+})
+
 
 })();
