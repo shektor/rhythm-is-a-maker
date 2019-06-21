@@ -1,13 +1,15 @@
-<h1 align='center'>
-  Rhythm Is A Maker.
+<h1 align="center">
+  <p align="center">Rhythm Is A Maker</p>
+  <a href="https://rhythm-is-a-maker.herokuapp.com/"><img width="584" alt="Beatgrid" src="https://user-images.githubusercontent.com/44544977/59917255-67ea1c80-9419-11e9-9b94-2efc3cd7733c.png"></a>
 </h1>
+  
 <p align="center">
-<img src="https://img.shields.io/travis/shektor/rhythm-is-a-maker/master.svg">
-<img src="https://img.shields.io/coveralls/github/shektor/rhythm-is-a-maker.svg">
+<a href="https://travis-ci.org/shektor/rhythm-is-a-maker"><img src="https://img.shields.io/travis/shektor/rhythm-is-a-maker/master.svg"></a>
+<a href ="https://coveralls.io/github/shektor/rhythm-is-a-maker"><img src="https://img.shields.io/coveralls/github/shektor/rhythm-is-a-maker.svg"></a>
 </p>
 
 <h1 align='center'>
- Team.
+ Team
 </h1>
 
 |  **Team Collaborators** | Scott Hall|   Frankie Bamgboye| Michael Darmody | Steven Hektor| Sarpong Abasimi | Jake Napper |
