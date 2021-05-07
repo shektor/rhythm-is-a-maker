@@ -27,7 +27,7 @@
     "express": "4.17.1",
     "utf-8-validate": "5.0.2",
     "ws": "7.0.0",
-    "lodash": ">=4.17.13"
+    "lodash": ">=4.17.19"
   },
   "devDependencies": {
     "coveralls": "^3.0.4",
